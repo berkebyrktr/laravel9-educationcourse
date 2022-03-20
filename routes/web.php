@@ -29,8 +29,12 @@ Route::middleware([
 Route::get('/', [\App\Http\Controllers\Elearning\HomeController::class, 'index']) -> name('home');
 Route::get('/about', [\App\Http\Controllers\Elearning\AboutController::class, 'index']) -> name('about');
 Route::get('/contact', [\App\Http\Controllers\Elearning\ContactController::class, 'index']) -> name('contact');
+Route::view('/loginuser', 'auth.login') -> name('loginuser');
+Route::view('/registeruser', 'auth.register') -> name('registeruser');
+Route::get('/logout', [\App\Http\Controllers\Elearning\AuthController::class, 'logout']) -> name('logout');
 Route::get('/categories', [\App\Http\Controllers\Elearning\CategoryController::class, 'index']) -> name('categories');
 Route::get('/courses/{id}', [\App\Http\Controllers\Elearning\CoursesController::class, 'index']) -> name('courses');
+Route::get('/user_courses', [\App\Http\Controllers\Elearning\CoursesController::class, 'user_courses']) -> name('user_courses');
 Route::get('/not_found', [\App\Http\Controllers\Elearning\NotFoundController::class, 'index']) -> name('not_found');
 Route::get('/team', [\App\Http\Controllers\Elearning\TeamController::class, 'index']) -> name('team');
 Route::get('/testimonial', [\App\Http\Controllers\Elearning\TestimonialController::class, 'index']) -> name('testimonial');

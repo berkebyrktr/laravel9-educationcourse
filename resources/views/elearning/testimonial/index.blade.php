@@ -63,7 +63,23 @@
                 </div>
                 <a href="/contact" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+            @auth
+                <div class="app-utility-item app-user-dropdown dropdown">
+                    <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="{{asset('/')}}admin_panel/assets/images/user.png" alt="user profile" width="50" height="50"></a>
+                    <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
+                        <li><a class="dropdown-item" href="/account">Account</a></li>
+                        <li><a class="dropdown-item" href="/user_courses">My Courses</a></li>
+                        <li><a class="dropdown-item" href="/purchased_courses">Purchased Courses</a></li>
+                        <li><a class="dropdown-item" href="/settings">Settings</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/logout">Log Out</a></li>
+                    </ul>
+                </div><!--//app-user-dropdown--> 
+            @endauth
+
+            @guest
+                <a href="/loginuser" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+            @endguest
         </div>
     </nav>
     <!-- Navbar End -->

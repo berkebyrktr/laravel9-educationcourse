@@ -54,14 +54,14 @@
                 <a href="/" class="nav-item nav-link">Home</a>
                 <a href="/about" class="nav-item nav-link">About</a>
                 <div class="nav-item dropdown">
-                <a href="/categories" class="nav-link dropdown-toggle">Courses</a>
+                    <a href="/categories" class="nav-link dropdown-toggle active">Courses</a>
                     <div class="dropdown-menu fade-down m-0">
                         @foreach($data as $item)
-                        <a href="/courses/{{$item->id}}" class="dropdown-item" style="text-transform:uppercase;"><b>{{$item->title}}</b></a>
+                            <a href="/courses/{{$item->id}}" class="dropdown-item" style="text-transform:uppercase;"><b>{{$item->title}}</b></a>
                         @endforeach
                     </div>
                 </div>
-                <a href="/contact" class="nav-item nav-link active">Contact</a>
+                <a href="/contact" class="nav-item nav-link">Contact</a>
             </div>
             
             @auth
@@ -91,12 +91,12 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Contact</h1>
+                        <h1 class="display-3 text-white animated slideInDown">My Courses</h1>
+                    
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
                             <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">My Courses</li>
                         </ol>
                     </nav>
                 </div>
@@ -106,88 +106,41 @@
     <!-- Header End -->
 
 
-    <!-- Contact Start -->
+    <!-- Courses Start -->
     <div class="container-xxl py-5">
+        
         <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Contact Us</h6>
-                <h1 class="mb-5">Contact For Any Query</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                       <div class="d-flex align-items-center mb-3">
-                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
-                            <i class="fa fa-map-marker-alt text-white"></i>
+            
+            <div class="row g-4 justify-content-center">
+            <a class="btn app-btn-secondary border" href="/user_courses/create">
+									    Create New
+									</a>
+            @foreach($courses as $item)
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="course-item bg-light">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="{{asset('/')}}elearning/img/course-1.jpg" alt="">
+                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Read More</a>
+                            </div>
                         </div>
-                        <div class="ms-3">
-                            <h5 class="text-primary">Office</h5>
-                            <p class="mb-0">100.yıl mahallesi Karabük</p>
+                        <div class="text-center p-4 pb-0">
+                            <h3 class="mb-0">{{$item->price}}₺</h3>
+                            <h5 class="mb-4">{{$item->title}}</h5>
                         </div>
-                    </div>
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
-                            <i class="fa fa-phone-alt text-white"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h5 class="text-primary">Mobile</h5>
-                            <p class="mb-0">0551 980 96 49</p>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
-                            <i class="fa fa-envelope-open text-white"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h5 class="text-primary">Email</h5>
-                            <p class="mb-0">1910205084@ogrenci.karabuk.edu.tr</p>
+                        <div class="d-flex border-top">
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-clock text-primary me-2"></i>{{$item->time}} Hours</small>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            @endforeach
 
-                        <iframe class="position-relative rounded w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1500.754785282089!2d32.65440755872192!3d41.2106646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x408354ac4492953f%3A0xab3b48ed0392a743!2sKarab%C3%BCk%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1654962278712!5m2!1str!2str"
-                        frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
-                </div>
-                <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    <label for="subject">Subject</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
-                                    <label for="message">Message</label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
             </div>
         </div>
     </div>
-    <!-- Contact End -->
-
+    <!-- Courses End -->
+        
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -243,7 +196,28 @@
                 </div>
             </div>
         </div>
-       
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
+                        Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Footer End -->
 
 
