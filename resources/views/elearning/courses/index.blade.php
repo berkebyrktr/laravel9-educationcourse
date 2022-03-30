@@ -141,7 +141,7 @@
                             <h5 class="mb-4">{{$item->title}}</h5>
                         </div>
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>{{$item->owner}}</small>
                             <small class="flex-fill text-center py-2"><i class="fa fa-clock text-primary me-2"></i>{{$item->time}} Hours</small>
                         </div>
                     </div>

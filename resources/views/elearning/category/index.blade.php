@@ -126,7 +126,7 @@
                                 <img class="img-fluid" src="{{asset('/')}}elearning/img/cat-2.jpg" alt="">
                                 <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 0px;">
                                     <h5 class="m-0">{{$item->title}}</h5>
-                                    <small class="text-primary">49 Courses</small>
+                               
                                 </div>
                             </a>
                         </div>
@@ -145,8 +145,8 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                 <h4 class="text-white mb-3">Quick Link</h4>
-                    <a class="btn btn-link" href="elearning/about">About Us</a>
-                    <a class="btn btn-link" href="elearning/contact">Contact Us</a>    
+                    <a class="btn btn-link" href="/about">About Us</a>
+                    <a class="btn btn-link" href="/contact">Contact Us</a>    
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Course;
 use App\Models\Purchase;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -13,8 +14,11 @@ class CoursesController extends Controller
 {
     public function index($id){
         $data = Category::all();
-        $course = Course::where('category_id', $id)->where('status', 1)->get();
-        return view('elearning.courses.index', ['id'=> $id, 'data' => $data, 'courses' => $course]);
+        $courses = Course::where('category_id', $id)->where('status', 1)->get();
+        foreach($courses as $course){
+            $course->owner = (User::find($course->user_id)->name);
+        }
+        return view('elearning.courses.index', ['id'=> $id, 'data' => $data, 'courses' => $courses]);
     }
 
     public function user_courses(){
@@ -23,6 +27,7 @@ class CoursesController extends Controller
         $course = Course::where('user_id', $userId)->get();
         foreach($course as $item){
             $item->category = (Category::find($item->category_id)->title);
+            
         }
         return view('elearning.user_courses.index', ['data' => $data, 'courses' => $course]);
     }
@@ -35,6 +40,7 @@ class CoursesController extends Controller
         foreach($purchases as $item){
             $course = Course::find($item->course_id);
             $course->category = Category::find($course->category_id)->title;
+            $course->owner = (User::find($item->user_id)->name);
             array_push($courses, $course);
         }
         return view('elearning.purchased_courses.index', ['data' => $data, 'courses' => $courses]);
