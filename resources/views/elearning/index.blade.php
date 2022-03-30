@@ -95,7 +95,7 @@
         <div class="owl-carousel header-carousel position-relative">
             @foreach($data as $item)
             <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="{{asset('/')}}elearning/img/cat-2.jpg" alt="">
+                <img class="img-fluid" src="{{asset('/')}}elearning/img/carousel-1.jpg" alt="">
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .7);">
                     <div class="container">
                         <div class="row justify-content-start">
@@ -105,7 +105,7 @@
                                 <a href="/courses/{{$item->id}}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">See Courses</a>
                             </div>
                         </div>
-                    </div>
+                    </div>1
                 </div>
             </div>
             @endforeach
@@ -147,7 +147,7 @@
                             <h5 class="mb-4">{{$item->title}}</h5>
                         </div>
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>{{$item->owner}}</small>
                             <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>{{$item->time}} Hours</small>
                         </div>
                     </div>

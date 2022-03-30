@@ -133,7 +133,8 @@
                             <h5 class="mb-4">{{$item->title}}</h5>
                         </div>
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>{{$item->category}}</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>{{$item->owner}}</small>
+                            <small class="flex-fill text-center border-end py-2">{{$item->category}}</small>
                             <small class="flex-fill text-center py-2"><i class="fa fa-clock text-primary me-2"></i>{{$item->time}} Hours</small>
                         </div>
                     </div>
@@ -152,8 +153,8 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                 <h4 class="text-white mb-3">Quick Link</h4>
-                    <a class="btn btn-link" href="elearning/about">About Us</a>
-                    <a class="btn btn-link" href="elearning/contact">Contact Us</a>    
+                    <a class="btn btn-link" href="/about">About Us</a>
+                    <a class="btn btn-link" href="/contact">Contact Us</a>    
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-white mb-3">Contact</h4>
