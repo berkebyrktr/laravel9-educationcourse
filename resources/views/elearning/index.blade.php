@@ -105,7 +105,7 @@
                                 <a href="/courses/{{$item->id}}" class="btn btn-light py-md-3 px-md-5 animated slideInRight">See Courses</a>
                             </div>
                         </div>
-                    </div>
+                    <!-- </div> -->
                     <div>
                 </div>
             </div>
