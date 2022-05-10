@@ -110,7 +110,6 @@
                 </div>
             </div>
             @endforeach
-            <!-- asfasfdsfd -->
 <div>
         </div>
     </div>
