@@ -17,7 +17,13 @@ Route::get('/', function () {
     return view('elearning.index');
 });
 
-//Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']) -> name('home');
+//Admin
+Route::get('/admin', function () {
+    return view('admin_panel.index');
+});
+
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']) -> name('home');
+
 
 Route::middleware([
     'auth:sanctum',
@@ -28,3 +34,11 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+//**********************ADMIN PANEL ROUTES***********************    */
+Route::get('/AdminPanel', [AdminHomeController::class, 'index']) -> name('admin');
+
+//**********************ADMIN CATEGORY ROUTES***********************    */
+
+Route::get('/AdminPanel/category', [App\Http\Controllers\AdminPanel\CategoryController::class, 'index']) -> name('admin_category');
+Route::get('/AdminPanel/category/create', [App\Http\Controllers\AdminPanel\CategoryController::class, 'create']) -> name('admin_category_create');
