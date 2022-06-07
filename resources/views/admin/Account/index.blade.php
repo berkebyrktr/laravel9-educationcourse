@@ -13,10 +13,10 @@
     <link rel="shortcut icon" href="favicon.ico"> 
     
     <!-- FontAwesome JS-->
-    <script defer src="assets/plugins/fontawesome/js/all.min.js"></script>
+    <script defer src="{{asset('/')}}admin_panel/assets/plugins/fontawesome/js/all.min.js"></script>
     
     <!-- App CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
+    <link id="theme-style" rel="stylesheet" href="{{asset('/')}}admin_panel/assets/css/portal.css">
 
 </head> 
 
@@ -61,7 +61,7 @@
 							       <div class="item p-3">
 								        <div class="row gx-2 justify-content-between align-items-center">
 									        <div class="col-auto">
-										       <img class="profile-image" src="assets/images/profiles/profile-1.png" alt="">
+										       <img class="profile-image" src="{{asset('/')}}admin_panel/assets/images/profiles/profile-1.png" alt="">
 									        </div><!--//col-->
 									        <div class="col">
 										        <div class="info"> 
@@ -70,7 +70,7 @@
 										        </div>
 									        </div><!--//col--> 
 								        </div><!--//row-->
-								        <a class="link-mask" href="notifications.html"></a>
+								        <a class="link-mask" href="#"></a>
 							       </div><!--//item-->
 							       <div class="item p-3">
 								        <div class="row gx-2 justify-content-between align-items-center">
@@ -89,7 +89,7 @@
 										        </div>
 									        </div><!--//col-->
 								        </div><!--//row-->
-								        <a class="link-mask" href="notifications.html"></a>
+								        <a class="link-mask" href="#"></a>
 							       </div><!--//item-->
 							       <div class="item p-3">
 								        <div class="row gx-2 justify-content-between align-items-center">
@@ -107,12 +107,12 @@
 										        </div>
 									        </div><!--//col-->
 								        </div><!--//row-->
-								        <a class="link-mask" href="notifications.html"></a>
+								        <a class="link-mask" href="#"></a>
 							       </div><!--//item-->
 							       <div class="item p-3">
 								        <div class="row gx-2 justify-content-between align-items-center">
 									        <div class="col-auto">
-										       <img class="profile-image" src="assets/images/profiles/profile-2.png" alt="">
+										       <img class="profile-image" src="{{asset('/')}}admin_panel/assets/images/profiles/profile-2.png" alt="">
 									        </div><!--//col-->
 									        <div class="col">
 										        <div class="info"> 
@@ -126,13 +126,13 @@
 						        </div><!--//dropdown-menu-content-->
 						        
 						        <div class="dropdown-menu-footer p-2 text-center">
-							        <a href="notifications.html">View all</a>
+							        <a href="#">View all</a>
 						        </div>
 															
 							</div><!--//dropdown-menu-->					        
 				        </div><!--//app-utility-item-->
 			            <div class="app-utility-item">
-				            <a href="settings.html" title="Settings">
+				            <a href="/admin/settings" title="Settings">
 					            <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 					            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z"/>
@@ -142,14 +142,14 @@
 					    </div><!--//app-utility-item-->
 			            
 			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="assets/images/user.png" alt="user profile"></a>
+				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="{{asset('/')}}admin_panel/assets/images/user.png" alt="user profile"></a>
 				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
-								<li><a class="dropdown-item" href="account.html">Account</a></li>
-								<li><a class="dropdown-item" href="settings.html">Settings</a></li>
+								<li><a class="dropdown-item" href="/admin/account">Account</a></li>
+								<li><a class="dropdown-item" href="/admin/settings">Settings</a></li>
 								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="login.html">Log Out</a></li>
+								<li><a class="dropdown-item" href="/admin/login">Log Out</a></li>
 							</ul>
-			            </div><!--//app-user-dropdown-->  
+			            </div><!--//app-user-dropdown--> 
 		            </div><!--//app-utilities-->
 		        </div><!--//row-->
 	            </div><!--//app-header-content-->
@@ -160,14 +160,14 @@
 	        <div class="sidepanel-inner d-flex flex-column">
 		        <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
 		        <div class="app-branding">
-		            <a class="app-logo" href="index.html"><img class="logo-icon me-2" src="assets/images/app-logo.svg" alt="logo"><span class="logo-text">PORTAL</span></a>
+		            <a class="app-logo" href="/admin"><img class="logo-icon me-2" src="{{asset('/')}}admin_panel/assets/images/app-logo.svg" alt="logo"><span class="logo-text">PORTAL</span></a>
 	
 		        </div><!--//app-branding-->  
 			    <nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
 				    <ul class="app-menu list-unstyled accordion" id="menu-accordion">
 					    <li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link" href="index.html">
+					        <a class="nav-link" href="/admin">
 						        <span class="nav-icon">
 						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 		  <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/>
@@ -179,7 +179,7 @@
 					    </li><!--//nav-item-->
 					    <li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link" href="docs.html">
+					        <a class="nav-link" href="/admin/docs">
 						        <span class="nav-icon">
 						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-folder" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path d="M9.828 4a3 3 0 0 1-2.12-.879l-.83-.828A1 1 0 0 0 6.173 2H2.5a1 1 0 0 0-1 .981L1.546 4h-1L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3v1z"/>
@@ -191,7 +191,7 @@
 					    </li><!--//nav-item-->
 					    <li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link" href="orders.html">
+					        <a class="nav-link" href="/admin/category">
 						        <span class="nav-icon">
 						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
@@ -223,9 +223,9 @@
 					        </a><!--//nav-link-->
 					        <div id="submenu-1" class="collapse submenu submenu-1 show" data-bs-parent="#menu-accordion">
 						        <ul class="submenu-list list-unstyled">
-							        <li class="submenu-item"><a class="submenu-link active" href="notifications.html">Notifications</a></li>
-							        <li class="submenu-item"><a class="submenu-link" href="account.html">Account</a></li>
-							        <li class="submenu-item"><a class="submenu-link" href="settings.html">Settings</a></li>
+							        <li class="submenu-item"><a class="submenu-link" href="/admin/notifications">Notifications</a></li>
+							        <li class="submenu-item"><a class="submenu-link active" href="/admin/account">Account</a></li>
+							        <li class="submenu-item"><a class="submenu-link" href="/admin/settings">Settings</a></li>
 							        
 						        </ul>
 					        </div>
@@ -248,17 +248,17 @@
 					        </a><!--//nav-link-->
 					        <div id="submenu-2" class="collapse submenu submenu-2" data-bs-parent="#menu-accordion">
 						        <ul class="submenu-list list-unstyled">
-							        <li class="submenu-item"><a class="submenu-link" href="login.html">Login</a></li>
-							        <li class="submenu-item"><a class="submenu-link" href="signup.html">Signup</a></li>
-							        <li class="submenu-item"><a class="submenu-link" href="reset-password.html">Reset password</a></li>
-							        <li class="submenu-item"><a class="submenu-link" href="404.html">404 page</a></li>
+							        <li class="submenu-item"><a class="submenu-link" href="/admin/login">Login</a></li>
+							        <li class="submenu-item"><a class="submenu-link" href="/admin/signup">Signup</a></li>
+							        <li class="submenu-item"><a class="submenu-link" href="/admin/reset_password">Reset password</a></li>
+							        <li class="submenu-item"><a class="submenu-link" href="/admin/not_found">404 page</a></li>
 						        </ul>
 					        </div>
 					    </li><!--//nav-item-->
-					   
+					    
 					    <li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link" href="charts.html">
+					        <a class="nav-link" href="/admin/charts">
 						        <span class="nav-icon">
 						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bar-chart-line" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 	  <path fill-rule="evenodd" d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z"/>
@@ -269,7 +269,7 @@
 					    </li><!--//nav-item-->
 					    <li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link" href="help.html">
+					        <a class="nav-link" href="/admin/help">
 						        <span class="nav-icon">
 						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-question-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -286,7 +286,7 @@
 					    <ul class="app-menu footer-menu list-unstyled">
 						    <li class="nav-item">
 						        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-						        <a class="nav-link" href="settings.html">
+						        <a class="nav-link" href="/admin/settings">
 							        <span class="nav-icon">
 							            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 	  <path fill-rule="evenodd" d="M8.837 1.626c-.246-.835-1.428-.835-1.674 0l-.094.319A1.873 1.873 0 0 1 4.377 3.06l-.292-.16c-.764-.415-1.6.42-1.184 1.185l.159.292a1.873 1.873 0 0 1-1.115 2.692l-.319.094c-.835.246-.835 1.428 0 1.674l.319.094a1.873 1.873 0 0 1 1.115 2.693l-.16.291c-.415.764.42 1.6 1.185 1.184l.292-.159a1.873 1.873 0 0 1 2.692 1.116l.094.318c.246.835 1.428.835 1.674 0l.094-.319a1.873 1.873 0 0 1 2.693-1.115l.291.16c.764.415 1.6-.42 1.184-1.185l-.159-.291a1.873 1.873 0 0 1 1.116-2.693l.318-.094c.835-.246.835-1.428 0-1.674l-.319-.094a1.873 1.873 0 0 1-1.115-2.692l.16-.292c.415-.764-.42-1.6-1.185-1.184l-.291.159A1.873 1.873 0 0 1 8.93 1.945l-.094-.319zm-2.633-.283c.527-1.79 3.065-1.79 3.592 0l.094.319a.873.873 0 0 0 1.255.52l.292-.16c1.64-.892 3.434.901 2.54 2.541l-.159.292a.873.873 0 0 0 .52 1.255l.319.094c1.79.527 1.79 3.065 0 3.592l-.319.094a.873.873 0 0 0-.52 1.255l.16.292c.893 1.64-.902 3.434-2.541 2.54l-.292-.159a.873.873 0 0 0-1.255.52l-.094.319c-.527 1.79-3.065 1.79-3.592 0l-.094-.319a.873.873 0 0 0-1.255-.52l-.292.16c-1.64.893-3.433-.902-2.54-2.541l.159-.292a.873.873 0 0 0-.52-1.255l-.319-.094c-1.79-.527-1.79-3.065 0-3.592l.319-.094a.873.873 0 0 0 .52-1.255l-.16-.292c-.892-1.64.902-3.433 2.541-2.54l.292.159a.873.873 0 0 0 1.255-.52l.094-.319z"/>
@@ -331,185 +331,274 @@
 	    
 	    <div class="app-content pt-3 p-md-3 p-lg-4">
 		    <div class="container-xl">
-			    <div class="position-relative mb-3">
-				    <div class="row g-3 justify-content-between">
-					    <div class="col-auto">
-					        <h1 class="app-page-title mb-0">Notifications</h1>
-					    </div>
-					    <div class="col-auto">
-					        <div class="page-utilities">
-							    <select class="form-select form-select-sm w-auto" >
-								  <option selected value="option-1">All</option>
-								  <option value="option-2">News</option>
-								  <option value="option-3">Product</option>
-								  <option value="option-4">Project</option>
-								  <option value="option-4">Billing</option>
-								</select>
-					        </div><!--//page-utilities-->
-					    </div>
-				    </div>
-			    </div>
 			    
-                <div class="app-card app-card-notification shadow-sm mb-4">
-				    <div class="app-card-header px-4 py-3">
-				        <div class="row g-3 align-items-center">
-					        <div class="col-12 col-lg-auto text-center text-lg-start">						        
-				                <img class="profile-image" src="assets/images/profiles/profile-1.png" alt="">
-					        </div><!--//col-->
-					        <div class="col-12 col-lg-auto text-center text-lg-start">
-						        <div class="notification-type mb-2"><span class="badge bg-info">Project</span></div>
-						        <h4 class="notification-title mb-1">Notification Heading Lorem Ipsum</h4>
-						        
-						        <ul class="notification-meta list-inline mb-0">
-							        <li class="list-inline-item">2 hrs ago</li>
-							        <li class="list-inline-item">|</li>
-							        <li class="list-inline-item">Amy Doe</li>
-						        </ul>
-						   
-					        </div><!--//col-->
-				        </div><!--//row-->
-				    </div><!--//app-card-header-->
-				    <div class="app-card-body p-4">
-					    <div class="notification-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed ultrices dolor, ac maximus ligula. Donec ex orci, mollis ac purus vel, tempor pulvinar justo. Praesent nibh massa, posuere non mollis vel, molestie non mauris. Aenean consequat facilisis orci, sed sagittis mauris interdum at.</div>
-				    </div><!--//app-card-body-->
-				    <div class="app-card-footer px-4 py-3">
-					    <a class="action-link" href="#">View all<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right ms-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-</svg></a>
-				    </div><!--//app-card-footer-->
-				</div><!--//app-card-->
-				
-				<div class="app-card app-card-notification shadow-sm mb-4">
-				    <div class="app-card-header px-4 py-3">
-				        <div class="row g-3 align-items-center">
-					        <div class="col-12 col-lg-auto text-center text-lg-start">						        
-				                <div class="app-icon-holder">
-									<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-receipt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-	  <path fill-rule="evenodd" d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27zm.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0l-.509-.51z"/>
-	  <path fill-rule="evenodd" d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z"/>
-	</svg>
-								</div><!--//app-icon-holder-->
-					        </div><!--//col-->
-					        <div class="col-12 col-lg-auto text-center text-lg-start">
-						        <div class="notification-type mb-2"><span class="badge bg-warning">Billing</span></div>
-						        <h4 class="notification-title mb-1">Notification Heading Lorem Ipsum</h4>
-						        
-						        <ul class="notification-meta list-inline mb-0">
-							        <li class="list-inline-item">1 day ago</li>
-							        <li class="list-inline-item">|</li>
-							        <li class="list-inline-item">System</li>
-						        </ul>
-						   
-					        </div><!--//col-->
-				        </div><!--//row-->
-				    </div><!--//app-card-header-->
-				    <div class="app-card-body p-4">
-					    <div class="notification-content">Praesent nibh massa, posuere non mollis vel, molestie non mauris. Aenean consequat facilisis orci, sed sagittis mauris interdum at.</div>
-				    </div><!--//app-card-body-->
-				    <div class="app-card-footer px-4 py-3">
-					    <a class="action-link" href="#">View invoice<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right ms-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-</svg></a>
-				    </div><!--//app-card-footer-->
-				</div><!--//app-card-->
-				
-				<div class="app-card app-card-notification shadow-sm mb-4">
-				    <div class="app-card-header px-4 py-3">
-				        <div class="row g-3 align-items-center">
-					        <div class="col-12 col-lg-auto text-center text-lg-start">						        
-				                <div class="app-icon-holder icon-holder-mono">
-										<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bar-chart-line" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z"/>
+			    <h1 class="app-page-title">My Account</h1>
+                <div class="row gy-4">
+	                <div class="col-12 col-lg-6">
+		                <div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
+						    <div class="app-card-header p-3 border-bottom-0">
+						        <div class="row align-items-center gx-3">
+							        <div class="col-auto">
+								        <div class="app-icon-holder">
+										    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
 </svg>
-								</div><!--//app-icon-holder-->
-					        </div><!--//col-->
-					        <div class="col-12 col-lg-auto text-center text-lg-start">
-						        <div class="notification-type mb-2"><span class="badge bg-info">Project</span></div>
-						        <h4 class="notification-title mb-1">Notification Heading Lorem Ipsum</h4>
-						        
-						        <ul class="notification-meta list-inline mb-0">
-							        <li class="list-inline-item">3 days ago</li>
-							        <li class="list-inline-item">|</li>
-							        <li class="list-inline-item">System</li>
-						        </ul>
+									    </div><!--//icon-holder-->
+						                
+							        </div><!--//col-->
+							        <div class="col-auto">
+								        <h4 class="app-card-title">Profile</h4>
+							        </div><!--//col-->
+						        </div><!--//row-->
+						    </div><!--//app-card-header-->
+						    <div class="app-card-body px-4 w-100">
+							    <div class="item border-bottom py-3">
+								    <div class="row justify-content-between align-items-center">
+									    <div class="col-auto">
+										    <div class="item-label mb-2"><strong>Photo</strong></div>
+										    <div class="item-data"><img class="profile-image" src="{{asset('/')}}admin_panel/assets/images/user.png" alt=""></div>
+									    </div><!--//col-->
+									    <div class="col text-end">
+										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
+									    </div><!--//col-->
+								    </div><!--//row-->
+							    </div><!--//item-->
+							    <div class="item border-bottom py-3">
+								    <div class="row justify-content-between align-items-center">
+									    <div class="col-auto">
+										    <div class="item-label"><strong>Name</strong></div>
+									        <div class="item-data">James Doe</div>
+									    </div><!--//col-->
+									    <div class="col text-end">
+										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
+									    </div><!--//col-->
+								    </div><!--//row-->
+							    </div><!--//item-->
+							    <div class="item border-bottom py-3">
+								    <div class="row justify-content-between align-items-center">
+									    <div class="col-auto">
+										    <div class="item-label"><strong>Email</strong></div>
+									        <div class="item-data">james.doe@website.com</div>
+									    </div><!--//col-->
+									    <div class="col text-end">
+										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
+									    </div><!--//col-->
+								    </div><!--//row-->
+							    </div><!--//item-->
+							    <div class="item border-bottom py-3">
+								    <div class="row justify-content-between align-items-center">
+									    <div class="col-auto">
+										    <div class="item-label"><strong>Website</strong></div>
+									        <div class="item-data">
+										        https://johndoewebsite.com
+									        </div>
+									    </div><!--//col-->
+									    <div class="col text-end">
+										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
+									    </div><!--//col-->
+								    </div><!--//row-->
+							    </div><!--//item-->
+							    <div class="item border-bottom py-3">
+								    <div class="row justify-content-between align-items-center">
+									    <div class="col-auto">
+										    <div class="item-label"><strong>Location</strong></div>
+									        <div class="item-data">
+										        New York
+									        </div>
+									    </div><!--//col-->
+									    <div class="col text-end">
+										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
+									    </div><!--//col-->
+								    </div><!--//row-->
+							    </div><!--//item-->
+						    </div><!--//app-card-body-->
+						    <div class="app-card-footer p-4 mt-auto">
+							   <a class="btn app-btn-secondary" href="#">Manage Profile</a>
+						    </div><!--//app-card-footer-->
 						   
-					        </div><!--//col-->
-				        </div><!--//row-->
-				    </div><!--//app-card-header-->
-				    <div class="app-card-body p-4">
-					    <div class="notification-content">Proin a magna sit amet mauris mollis mattis in at dui. Fusce laoreet metus et nunc lobortis, suscipit sollicitudin augue pellentesque. Maecenas maximus iaculis scelerisque.</div>
-				    </div><!--//app-card-body-->
-				    <div class="app-card-footer px-4 py-3">
-					    <a class="action-link" href="#">View invoice<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right ms-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-</svg></a>
-				    </div><!--//app-card-footer-->
-				</div><!--//app-card-->
-
-				<div class="app-card app-card-notification shadow-sm mb-4">
-				    <div class="app-card-header px-4 py-3">
-				        <div class="row g-3 align-items-center">
-					        <div class="col-12 col-lg-auto text-center text-lg-start">						        
-				                <img class="profile-image" src="assets/images/profiles/profile-2.png" alt="">
-					        </div><!--//col-->
-					        <div class="col-12 col-lg-auto text-center text-lg-start">
-						        <div class="notification-type mb-2"><span class="badge bg-secondary">Product</span></div>
-						        <h4 class="notification-title mb-1">Notification Heading Lorem Ipsum</h4>
-						        
-						        <ul class="notification-meta list-inline mb-0">
-							        <li class="list-inline-item">7 days ago</li>
-							        <li class="list-inline-item">|</li>
-							        <li class="list-inline-item">James Smith</li>
-						        </ul>
+						</div><!--//app-card-->
+	                </div><!--//col-->
+	                <div class="col-12 col-lg-6">
+		                <div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
+						    <div class="app-card-header p-3 border-bottom-0">
+						        <div class="row align-items-center gx-3">
+							        <div class="col-auto">
+								        <div class="app-icon-holder">
+										    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sliders" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z"/>
+</svg>
+									    </div><!--//icon-holder-->
+						                
+							        </div><!--//col-->
+							        <div class="col-auto">
+								        <h4 class="app-card-title">Preferences</h4>
+							        </div><!--//col-->
+						        </div><!--//row-->
+						    </div><!--//app-card-header-->
+						    <div class="app-card-body px-4 w-100">
+							    
+							    <div class="item border-bottom py-3">
+								    <div class="row justify-content-between align-items-center">
+									    <div class="col-auto">
+										    <div class="item-label"><strong>Language </strong></div>
+									        <div class="item-data">English</div>
+									    </div><!--//col-->
+									    <div class="col text-end">
+										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
+									    </div><!--//col-->
+								    </div><!--//row-->
+							    </div><!--//item-->
+							    <div class="item border-bottom py-3">
+								    <div class="row justify-content-between align-items-center">
+									    <div class="col-auto">
+										    <div class="item-label"><strong>Time Zone</strong></div>
+									        <div class="item-data">Central Standard Time (UTC-6)</div>
+									    </div><!--//col-->
+									    <div class="col text-end">
+										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
+									    </div><!--//col-->
+								    </div><!--//row-->
+							    </div><!--//item-->
+							    <div class="item border-bottom py-3">
+								    <div class="row justify-content-between align-items-center">
+									    <div class="col-auto">
+										    <div class="item-label"><strong>Currency</strong></div>
+									        <div class="item-data">$(US Dollars)</div>
+									    </div><!--//col-->
+									    <div class="col text-end">
+										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
+									    </div><!--//col-->
+								    </div><!--//row-->
+							    </div><!--//item-->
+							    <div class="item border-bottom py-3">
+								    <div class="row justify-content-between align-items-center">
+									    <div class="col-auto">
+										    <div class="item-label"><strong>Email Subscription</strong></div>
+									        <div class="item-data">Off</div>
+									    </div><!--//col-->
+									    <div class="col text-end">
+										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
+									    </div><!--//col-->
+								    </div><!--//row-->
+							    </div><!--//item-->
+							    <div class="item border-bottom py-3">
+								    <div class="row justify-content-between align-items-center">
+									    <div class="col-auto">
+										    <div class="item-label"><strong>SMS Notifications</strong></div>
+									        <div class="item-data">On</div>
+									    </div><!--//col-->
+									    <div class="col text-end">
+										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
+									    </div><!--//col-->
+								    </div><!--//row-->
+							    </div><!--//item-->
+						    </div><!--//app-card-body-->
+						    <div class="app-card-footer p-4 mt-auto">
+							   <a class="btn app-btn-secondary" href="#">Manage Preferences</a>
+						    </div><!--//app-card-footer-->
 						   
-					        </div><!--//col-->
-				        </div><!--//row-->
-				    </div><!--//app-card-header-->
-				    <div class="app-card-body p-4">
-					    <div class="notification-content">Sed tempor faucibus arcu, nec tristique erat congue sed. Pellentesque auctor ut elit vel feugiat. Sed a mauris tempor, tempor lacus vel, tristique metus. Nulla interdum felis id metus fermentum laoreet.</div>
-				    </div><!--//app-card-body-->
-				    <div class="app-card-footer px-4 py-3">
-					    <a class="action-link" href="#">View all<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right ms-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-</svg></a>
-				    </div><!--//app-card-footer-->
-				</div><!--//app-card-->
-				
-				
-				<div class="app-card app-card-notification shadow-sm mb-4">
-				    <div class="app-card-header px-4 py-3">
-				        <div class="row g-3 align-items-center">
-					        <div class="col-12 col-lg-auto text-center text-lg-start">						        
-				                <img class="profile-image" src="assets/images/profiles/profile-3.png" alt="">
-					        </div><!--//col-->
-					        <div class="col-12 col-lg-auto text-center text-lg-start">
-						        <div class="notification-type mb-2"><span class="badge bg-success">News</span></div>
-						        <h4 class="notification-title mb-1">Notification Heading Lorem Ipsum</h4>
-						        
-						        <ul class="notification-meta list-inline mb-0">
-							        <li class="list-inline-item">7 days ago</li>
-							        <li class="list-inline-item">|</li>
-							        <li class="list-inline-item">Kate Sanders</li>
-						        </ul>
+						</div><!--//app-card-->
+	                </div><!--//col-->
+	                <div class="col-12 col-lg-6">
+		                <div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
+						    <div class="app-card-header p-3 border-bottom-0">
+						        <div class="row align-items-center gx-3">
+							        <div class="col-auto">
+								        <div class="app-icon-holder">
+										    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-shield-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M5.443 1.991a60.17 60.17 0 0 0-2.725.802.454.454 0 0 0-.315.366C1.87 7.056 3.1 9.9 4.567 11.773c.736.94 1.533 1.636 2.197 2.093.333.228.626.394.857.5.116.053.21.089.282.11A.73.73 0 0 0 8 14.5c.007-.001.038-.005.097-.023.072-.022.166-.058.282-.111.23-.106.525-.272.857-.5a10.197 10.197 0 0 0 2.197-2.093C12.9 9.9 14.13 7.056 13.597 3.159a.454.454 0 0 0-.315-.366c-.626-.2-1.682-.526-2.725-.802C9.491 1.71 8.51 1.5 8 1.5c-.51 0-1.49.21-2.557.491zm-.256-.966C6.23.749 7.337.5 8 .5c.662 0 1.77.249 2.813.525a61.09 61.09 0 0 1 2.772.815c.528.168.926.623 1.003 1.184.573 4.197-.756 7.307-2.367 9.365a11.191 11.191 0 0 1-2.418 2.3 6.942 6.942 0 0 1-1.007.586c-.27.124-.558.225-.796.225s-.526-.101-.796-.225a6.908 6.908 0 0 1-1.007-.586 11.192 11.192 0 0 1-2.417-2.3C2.167 10.331.839 7.221 1.412 3.024A1.454 1.454 0 0 1 2.415 1.84a61.11 61.11 0 0 1 2.772-.815z"/>
+  <path fill-rule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+</svg>
+									    </div><!--//icon-holder-->
+						                
+							        </div><!--//col-->
+							        <div class="col-auto">
+								        <h4 class="app-card-title">Security</h4>
+							        </div><!--//col-->
+						        </div><!--//row-->
+						    </div><!--//app-card-header-->
+						    <div class="app-card-body px-4 w-100">
+							    
+							    <div class="item border-bottom py-3">
+								    <div class="row justify-content-between align-items-center">
+									    <div class="col-auto">
+										    <div class="item-label"><strong>Password</strong></div>
+									        <div class="item-data">••••••••</div>
+									    </div><!--//col-->
+									    <div class="col text-end">
+										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
+									    </div><!--//col-->
+								    </div><!--//row-->
+							    </div><!--//item-->
+							    <div class="item border-bottom py-3">
+								    <div class="row justify-content-between align-items-center">
+									    <div class="col-auto">
+										    <div class="item-label"><strong>Two-Factor Authentication</strong></div>
+									        <div class="item-data">You haven't set up two-factor authentication. </div>
+									    </div><!--//col-->
+									    <div class="col text-end">
+										    <a class="btn-sm app-btn-secondary" href="#">Set up</a>
+									    </div><!--//col-->
+								    </div><!--//row-->
+							    </div><!--//item-->
+						    </div><!--//app-card-body-->
+						    
+						    <div class="app-card-footer p-4 mt-auto">
+							   <a class="btn app-btn-secondary" href="#">Manage Security</a>
+						    </div><!--//app-card-footer-->
 						   
-					        </div><!--//col-->
-				        </div><!--//row-->
-				    </div><!--//app-card-header-->
-				    <div class="app-card-body p-4">
-					    <div class="notification-content">Sed tempor faucibus arcu, nec tristique erat congue sed. Pellentesque auctor ut elit vel feugiat. Sed a mauris tempor, tempor lacus vel, tristique metus. Nulla interdum felis id metus fermentum laoreet.</div>
-				    </div><!--//app-card-body-->
-				    <div class="app-card-footer px-4 py-3">
-					    <a class="action-link" href="#">Read more<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right ms-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-</svg></a>
-				    </div><!--//app-card-footer-->
-				</div><!--//app-card-->
-				
-				
-				
-				
-				
-				<div class="text-center mt-4"><a class="btn app-btn-secondary" href="#">Load more notifications</a></div>
+						</div><!--//app-card-->
+	                </div>
+	                <div class="col-12 col-lg-6">
+		                <div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
+						    <div class="app-card-header p-3 border-bottom-0">
+						        <div class="row align-items-center gx-3">
+							        <div class="col-auto">
+								        <div class="app-icon-holder">
+										    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-credit-card" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
+  <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
+</svg>
+									    </div><!--//icon-holder-->
+						                
+							        </div><!--//col-->
+							        <div class="col-auto">
+								        <h4 class="app-card-title">Payment methods</h4>
+							        </div><!--//col-->
+						        </div><!--//row-->
+						    </div><!--//app-card-header-->
+						    <div class="app-card-body px-4 w-100">
+							    
+							    <div class="item border-bottom py-3">
+								    <div class="row justify-content-between align-items-center">
+									    <div class="col-auto">
+										    <div class="item-label"><i class="fab fa-cc-visa me-2"></i><strong>Credit/Debit Card </strong></div>
+									        <div class="item-data">1234*******5678</div>
+									    </div><!--//col-->
+									    <div class="col text-end">
+										    <a class="btn-sm app-btn-secondary" href="#">Edit</a>
+									    </div><!--//col-->
+								    </div><!--//row-->
+							    </div><!--//item-->
+							    <div class="item border-bottom py-3">
+								    <div class="row justify-content-between align-items-center">
+									    <div class="col-auto">
+										    <div class="item-label"><i class="fab fa-paypal me-2"></i><strong>PayPal</strong></div>
+									        <div class="item-data">Not connected</div>
+									    </div><!--//col-->
+									    <div class="col text-end">
+										    <a class="btn-sm app-btn-secondary" href="#">Connect</a>
+									    </div><!--//col-->
+								    </div><!--//row-->
+							    </div><!--//item-->
+						    </div><!--//app-card-body-->
+						    <div class="app-card-footer p-4 mt-auto">
+							   <a class="btn app-btn-secondary" href="#">Manage Payment</a>
+						    </div><!--//app-card-footer-->
+						   
+						</div><!--//app-card-->
+	                </div>
+                </div><!--//row-->
 			    
 		    </div><!--//container-fluid-->
 	    </div><!--//app-content-->
@@ -526,11 +615,11 @@
 
  
     <!-- Javascript -->          
-    <script src="assets/plugins/popper.min.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    <script src="{{asset('/')}}admin_panel/assets/plugins/popper.min.js"></script>
+    <script src="{{asset('/')}}admin_panel/assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
     
     <!-- Page Specific JS -->
-    <script src="assets/js/app.js"></script> 
+    <script src="{{asset('/')}}admin_panel/assets/js/app.js"></script> 
 
 </body>
 </html> 
