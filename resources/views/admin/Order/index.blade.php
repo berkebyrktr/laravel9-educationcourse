@@ -70,7 +70,7 @@
 										        </div>
 									        </div><!--//col--> 
 								        </div><!--//row-->
-								        <a class="link-mask" href="#"></a>
+								        <a class="link-mask" href="/admin/notifications"></a>
 							       </div><!--//item-->
 							       <div class="item p-3">
 								        <div class="row gx-2 justify-content-between align-items-center">
@@ -89,7 +89,7 @@
 										        </div>
 									        </div><!--//col-->
 								        </div><!--//row-->
-								        <a class="link-mask" href="#"></a>
+								        <a class="link-mask" href="/admin/notifications"></a>
 							       </div><!--//item-->
 							       <div class="item p-3">
 								        <div class="row gx-2 justify-content-between align-items-center">
@@ -107,7 +107,7 @@
 										        </div>
 									        </div><!--//col-->
 								        </div><!--//row-->
-								        <a class="link-mask" href="#"></a>
+								        <a class="link-mask" href="/admin/notifications"></a>
 							       </div><!--//item-->
 							       <div class="item p-3">
 								        <div class="row gx-2 justify-content-between align-items-center">
@@ -121,12 +121,12 @@
 										        </div>
 									        </div><!--//col--> 
 								        </div><!--//row-->
-								        <a class="link-mask" href="#"></a>
+								        <a class="link-mask" href="/admin/notifications"></a>
 							       </div><!--//item-->
 						        </div><!--//dropdown-menu-content-->
 						        
 						        <div class="dropdown-menu-footer p-2 text-center">
-							        <a href="#">View all</a>
+							        <a href="/admin/notifications">View all</a>
 						        </div>
 															
 							</div><!--//dropdown-menu-->					        
@@ -191,7 +191,7 @@
 					    </li><!--//nav-item-->
 					    <li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link" href="/admin/order">
+					        <a class="nav-link active" href="/admin/order">
 						        <span class="nav-icon">
 						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
@@ -221,7 +221,7 @@
 					    </li><!--//nav-item-->
 					    <li class="nav-item has-submenu">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link submenu-toggle active" href="#" data-bs-toggle="collapse" data-bs-target="#submenu-1" aria-expanded="true" aria-controls="submenu-1">
+					        <a class="nav-link submenu-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#submenu-1" aria-expanded="false" aria-controls="submenu-1">
 						        <span class="nav-icon">
 						        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-files" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -236,10 +236,10 @@
 	</svg>
 	                             </span><!--//submenu-arrow-->
 					        </a><!--//nav-link-->
-					        <div id="submenu-1" class="collapse submenu submenu-1 show" data-bs-parent="#menu-accordion">
+					        <div id="submenu-1" class="collapse submenu submenu-1" data-bs-parent="#menu-accordion">
 						        <ul class="submenu-list list-unstyled">
 							        <li class="submenu-item"><a class="submenu-link" href="/admin/notifications">Notifications</a></li>
-							        <li class="submenu-item"><a class="submenu-link active" href="/admin/account">Account</a></li>
+							        <li class="submenu-item"><a class="submenu-link" href="/admin/account">Account</a></li>
 							        <li class="submenu-item"><a class="submenu-link" href="/admin/settings">Settings</a></li>
 							        
 						        </ul>
@@ -265,7 +265,7 @@
 						        <ul class="submenu-list list-unstyled">
 							        <li class="submenu-item"><a class="submenu-link" href="/admin/login">Login</a></li>
 							        <li class="submenu-item"><a class="submenu-link" href="/admin/signup">Signup</a></li>
-							        <li class="submenu-item"><a class="submenu-link" href="/admin/reset_password">Reset password</a></li>
+							        <li class="submenu-item"><a class="submenu-link" href="/admin/reset_password>Reset password</a></li>
 							        <li class="submenu-item"><a class="submenu-link" href="/admin/not_found">404 page</a></li>
 						        </ul>
 					        </div>
@@ -347,273 +347,290 @@
 	    <div class="app-content pt-3 p-md-3 p-lg-4">
 		    <div class="container-xl">
 			    
-			    <h1 class="app-page-title">My Account</h1>
-                <div class="row gy-4">
-	                <div class="col-12 col-lg-6">
-		                <div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
-						    <div class="app-card-header p-3 border-bottom-0">
-						        <div class="row align-items-center gx-3">
-							        <div class="col-auto">
-								        <div class="app-icon-holder">
-										    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M10 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-</svg>
-									    </div><!--//icon-holder-->
-						                
-							        </div><!--//col-->
-							        <div class="col-auto">
-								        <h4 class="app-card-title">Profile</h4>
-							        </div><!--//col-->
-						        </div><!--//row-->
-						    </div><!--//app-card-header-->
-						    <div class="app-card-body px-4 w-100">
-							    <div class="item border-bottom py-3">
-								    <div class="row justify-content-between align-items-center">
-									    <div class="col-auto">
-										    <div class="item-label mb-2"><strong>Photo</strong></div>
-										    <div class="item-data"><img class="profile-image" src="{{asset('/')}}admin_panel/assets/images/user.png" alt=""></div>
-									    </div><!--//col-->
-									    <div class="col text-end">
-										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
-									    </div><!--//col-->
-								    </div><!--//row-->
-							    </div><!--//item-->
-							    <div class="item border-bottom py-3">
-								    <div class="row justify-content-between align-items-center">
-									    <div class="col-auto">
-										    <div class="item-label"><strong>Name</strong></div>
-									        <div class="item-data">James Doe</div>
-									    </div><!--//col-->
-									    <div class="col text-end">
-										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
-									    </div><!--//col-->
-								    </div><!--//row-->
-							    </div><!--//item-->
-							    <div class="item border-bottom py-3">
-								    <div class="row justify-content-between align-items-center">
-									    <div class="col-auto">
-										    <div class="item-label"><strong>Email</strong></div>
-									        <div class="item-data">james.doe@website.com</div>
-									    </div><!--//col-->
-									    <div class="col text-end">
-										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
-									    </div><!--//col-->
-								    </div><!--//row-->
-							    </div><!--//item-->
-							    <div class="item border-bottom py-3">
-								    <div class="row justify-content-between align-items-center">
-									    <div class="col-auto">
-										    <div class="item-label"><strong>Website</strong></div>
-									        <div class="item-data">
-										        https://johndoewebsite.com
-									        </div>
-									    </div><!--//col-->
-									    <div class="col text-end">
-										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
-									    </div><!--//col-->
-								    </div><!--//row-->
-							    </div><!--//item-->
-							    <div class="item border-bottom py-3">
-								    <div class="row justify-content-between align-items-center">
-									    <div class="col-auto">
-										    <div class="item-label"><strong>Location</strong></div>
-									        <div class="item-data">
-										        New York
-									        </div>
-									    </div><!--//col-->
-									    <div class="col text-end">
-										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
-									    </div><!--//col-->
-								    </div><!--//row-->
-							    </div><!--//item-->
-						    </div><!--//app-card-body-->
-						    <div class="app-card-footer p-4 mt-auto">
-							   <a class="btn app-btn-secondary" href="#">Manage Profile</a>
-						    </div><!--//app-card-footer-->
-						   
+			    <div class="row g-3 mb-4 align-items-center justify-content-between">
+				    <div class="col-auto">
+			            <h1 class="app-page-title mb-0">Orders</h1>
+				    </div>
+				    <div class="col-auto">
+					     <div class="page-utilities">
+						    <div class="row g-2 justify-content-start justify-content-md-end align-items-center">
+							    <div class="col-auto">
+								    <form class="table-search-form row gx-1 align-items-center">
+					                    <div class="col-auto">
+					                        <input type="text" id="search-orders" name="searchorders" class="form-control search-orders" placeholder="Search">
+					                    </div>
+					                    <div class="col-auto">
+					                        <button type="submit" class="btn app-btn-secondary">Search</button>
+					                    </div>
+					                </form>
+					                
+							    </div><!--//col-->
+							    <div class="col-auto">
+								    
+								    <select class="form-select w-auto" >
+										  <option selected value="option-1">All</option>
+										  <option value="option-2">This week</option>
+										  <option value="option-3">This month</option>
+										  <option value="option-4">Last 3 months</option>
+										  
+									</select>
+							    </div>
+							    <div class="col-auto">						    
+								    <a class="btn app-btn-secondary" href="#">
+									    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download me-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		  <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+		  <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+		</svg>
+									    Download CSV
+									</a>
+							    </div>
+						    </div><!--//row-->
+					    </div><!--//table-utilities-->
+				    </div><!--//col-auto-->
+			    </div><!--//row-->
+			   
+			    
+			    <nav id="orders-table-tab" class="orders-table-tab app-nav-tabs nav shadow-sm flex-column flex-sm-row mb-4">
+				    <a class="flex-sm-fill text-sm-center nav-link active" id="orders-all-tab" data-bs-toggle="tab" href="#orders-all" role="tab" aria-controls="orders-all" aria-selected="true">All</a>
+				    <a class="flex-sm-fill text-sm-center nav-link"  id="orders-paid-tab" data-bs-toggle="tab" href="#orders-paid" role="tab" aria-controls="orders-paid" aria-selected="false">Paid</a>
+				    <a class="flex-sm-fill text-sm-center nav-link" id="orders-pending-tab" data-bs-toggle="tab" href="#orders-pending" role="tab" aria-controls="orders-pending" aria-selected="false">Pending</a>
+				    <a class="flex-sm-fill text-sm-center nav-link" id="orders-cancelled-tab" data-bs-toggle="tab" href="#orders-cancelled" role="tab" aria-controls="orders-cancelled" aria-selected="false">Cancelled</a>
+				</nav>
+				
+				
+				<div class="tab-content" id="orders-table-tab-content">
+			        <div class="tab-pane fade show active" id="orders-all" role="tabpanel" aria-labelledby="orders-all-tab">
+					    <div class="app-card app-card-orders-table shadow-sm mb-5">
+						    <div class="app-card-body">
+							    <div class="table-responsive">
+							        <table class="table app-table-hover mb-0 text-left">
+										<thead>
+											<tr>
+												<th class="cell">Order</th>
+												<th class="cell">Product</th>
+												<th class="cell">Customer</th>
+												<th class="cell">Date</th>
+												<th class="cell">Status</th>
+												<th class="cell">Total</th>
+												<th class="cell"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="cell">#15346</td>
+												<td class="cell"><span class="truncate">Lorem ipsum dolor sit amet eget volutpat erat</span></td>
+												<td class="cell">John Sanders</td>
+												<td class="cell"><span>17 Oct</span><span class="note">2:16 PM</span></td>
+												<td class="cell"><span class="badge bg-success">Paid</span></td>
+												<td class="cell">$259.35</td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+											</tr>
+											<tr>
+												<td class="cell">#15345</td>
+												<td class="cell"><span class="truncate">Consectetur adipiscing elit</span></td>
+												<td class="cell">Dylan Ambrose</td>
+												<td class="cell"><span class="cell-data">16 Oct</span><span class="note">03:16 AM</span></td>
+												<td class="cell"><span class="badge bg-warning">Pending</span></td>
+												<td class="cell">$96.20</td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+											</tr>
+											<tr>
+												<td class="cell">#15344</td>
+												<td class="cell"><span class="truncate">Pellentesque diam imperdiet</span></td>
+												<td class="cell">Teresa Holland</td>
+												<td class="cell"><span class="cell-data">16 Oct</span><span class="note">01:16 AM</span></td>
+												<td class="cell"><span class="badge bg-success">Paid</span></td>
+												<td class="cell">$123.00</td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+											</tr>
+											
+											<tr>
+												<td class="cell">#15343</td>
+												<td class="cell"><span class="truncate">Vestibulum a accumsan lectus sed mollis ipsum</span></td>
+												<td class="cell">Jayden Massey</td>
+												<td class="cell"><span class="cell-data">15 Oct</span><span class="note">8:07 PM</span></td>
+												<td class="cell"><span class="badge bg-success">Paid</span></td>
+												<td class="cell">$199.00</td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+											</tr>
+											
+											<tr>
+												<td class="cell">#15342</td>
+												<td class="cell"><span class="truncate">Justo feugiat neque</span></td>
+												<td class="cell">Reina Brooks</td>
+												<td class="cell"><span class="cell-data">12 Oct</span><span class="note">04:23 PM</span></td>
+												<td class="cell"><span class="badge bg-danger">Cancelled</span></td>
+												<td class="cell">$59.00</td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+											</tr>
+											
+											<tr>
+												<td class="cell">#15341</td>
+												<td class="cell"><span class="truncate">Morbi vulputate lacinia neque et sollicitudin</span></td>
+												<td class="cell">Raymond Atkins</td>
+												<td class="cell"><span class="cell-data">11 Oct</span><span class="note">11:18 AM</span></td>
+												<td class="cell"><span class="badge bg-success">Paid</span></td>
+												<td class="cell">$678.26</td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+											</tr>
+		
+										</tbody>
+									</table>
+						        </div><!--//table-responsive-->
+						       
+						    </div><!--//app-card-body-->		
 						</div><!--//app-card-->
-	                </div><!--//col-->
-	                <div class="col-12 col-lg-6">
-		                <div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
-						    <div class="app-card-header p-3 border-bottom-0">
-						        <div class="row align-items-center gx-3">
-							        <div class="col-auto">
-								        <div class="app-icon-holder">
-										    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sliders" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3h9.05zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8h2.05zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1h9.05z"/>
-</svg>
-									    </div><!--//icon-holder-->
-						                
-							        </div><!--//col-->
-							        <div class="col-auto">
-								        <h4 class="app-card-title">Preferences</h4>
-							        </div><!--//col-->
-						        </div><!--//row-->
-						    </div><!--//app-card-header-->
-						    <div class="app-card-body px-4 w-100">
-							    
-							    <div class="item border-bottom py-3">
-								    <div class="row justify-content-between align-items-center">
-									    <div class="col-auto">
-										    <div class="item-label"><strong>Language </strong></div>
-									        <div class="item-data">English</div>
-									    </div><!--//col-->
-									    <div class="col text-end">
-										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
-									    </div><!--//col-->
-								    </div><!--//row-->
-							    </div><!--//item-->
-							    <div class="item border-bottom py-3">
-								    <div class="row justify-content-between align-items-center">
-									    <div class="col-auto">
-										    <div class="item-label"><strong>Time Zone</strong></div>
-									        <div class="item-data">Central Standard Time (UTC-6)</div>
-									    </div><!--//col-->
-									    <div class="col text-end">
-										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
-									    </div><!--//col-->
-								    </div><!--//row-->
-							    </div><!--//item-->
-							    <div class="item border-bottom py-3">
-								    <div class="row justify-content-between align-items-center">
-									    <div class="col-auto">
-										    <div class="item-label"><strong>Currency</strong></div>
-									        <div class="item-data">$(US Dollars)</div>
-									    </div><!--//col-->
-									    <div class="col text-end">
-										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
-									    </div><!--//col-->
-								    </div><!--//row-->
-							    </div><!--//item-->
-							    <div class="item border-bottom py-3">
-								    <div class="row justify-content-between align-items-center">
-									    <div class="col-auto">
-										    <div class="item-label"><strong>Email Subscription</strong></div>
-									        <div class="item-data">Off</div>
-									    </div><!--//col-->
-									    <div class="col text-end">
-										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
-									    </div><!--//col-->
-								    </div><!--//row-->
-							    </div><!--//item-->
-							    <div class="item border-bottom py-3">
-								    <div class="row justify-content-between align-items-center">
-									    <div class="col-auto">
-										    <div class="item-label"><strong>SMS Notifications</strong></div>
-									        <div class="item-data">On</div>
-									    </div><!--//col-->
-									    <div class="col text-end">
-										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
-									    </div><!--//col-->
-								    </div><!--//row-->
-							    </div><!--//item-->
-						    </div><!--//app-card-body-->
-						    <div class="app-card-footer p-4 mt-auto">
-							   <a class="btn app-btn-secondary" href="#">Manage Preferences</a>
-						    </div><!--//app-card-footer-->
-						   
+						<nav class="app-pagination">
+							<ul class="pagination justify-content-center">
+								<li class="page-item disabled">
+									<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+							    </li>
+								<li class="page-item active"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item">
+								    <a class="page-link" href="#">Next</a>
+								</li>
+							</ul>
+						</nav><!--//app-pagination-->
+						
+			        </div><!--//tab-pane-->
+			        
+			        <div class="tab-pane fade" id="orders-paid" role="tabpanel" aria-labelledby="orders-paid-tab">
+					    <div class="app-card app-card-orders-table mb-5">
+						    <div class="app-card-body">
+							    <div class="table-responsive">
+								    
+							        <table class="table mb-0 text-left">
+										<thead>
+											<tr>
+												<th class="cell">Order</th>
+												<th class="cell">Product</th>
+												<th class="cell">Customer</th>
+												<th class="cell">Date</th>
+												<th class="cell">Status</th>
+												<th class="cell">Total</th>
+												<th class="cell"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="cell">#15346</td>
+												<td class="cell"><span class="truncate">Lorem ipsum dolor sit amet eget volutpat erat</span></td>
+												<td class="cell">John Sanders</td>
+												<td class="cell"><span>17 Oct</span><span class="note">2:16 PM</span></td>
+												<td class="cell"><span class="badge bg-success">Paid</span></td>
+												<td class="cell">$259.35</td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+											</tr>
+											
+											<tr>
+												<td class="cell">#15344</td>
+												<td class="cell"><span class="truncate">Pellentesque diam imperdiet</span></td>
+												<td class="cell">Teresa Holland</td>
+												<td class="cell"><span class="cell-data">16 Oct</span><span class="note">01:16 AM</span></td>
+												<td class="cell"><span class="badge bg-success">Paid</span></td>
+												<td class="cell">$123.00</td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+											</tr>
+											
+											<tr>
+												<td class="cell">#15343</td>
+												<td class="cell"><span class="truncate">Vestibulum a accumsan lectus sed mollis ipsum</span></td>
+												<td class="cell">Jayden Massey</td>
+												<td class="cell"><span class="cell-data">15 Oct</span><span class="note">8:07 PM</span></td>
+												<td class="cell"><span class="badge bg-success">Paid</span></td>
+												<td class="cell">$199.00</td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+											</tr>
+										
+											
+											<tr>
+												<td class="cell">#15341</td>
+												<td class="cell"><span class="truncate">Morbi vulputate lacinia neque et sollicitudin</span></td>
+												<td class="cell">Raymond Atkins</td>
+												<td class="cell"><span class="cell-data">11 Oct</span><span class="note">11:18 AM</span></td>
+												<td class="cell"><span class="badge bg-success">Paid</span></td>
+												<td class="cell">$678.26</td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+											</tr>
+		
+										</tbody>
+									</table>
+						        </div><!--//table-responsive-->
+						    </div><!--//app-card-body-->		
 						</div><!--//app-card-->
-	                </div><!--//col-->
-	                <div class="col-12 col-lg-6">
-		                <div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
-						    <div class="app-card-header p-3 border-bottom-0">
-						        <div class="row align-items-center gx-3">
-							        <div class="col-auto">
-								        <div class="app-icon-holder">
-										    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-shield-check" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M5.443 1.991a60.17 60.17 0 0 0-2.725.802.454.454 0 0 0-.315.366C1.87 7.056 3.1 9.9 4.567 11.773c.736.94 1.533 1.636 2.197 2.093.333.228.626.394.857.5.116.053.21.089.282.11A.73.73 0 0 0 8 14.5c.007-.001.038-.005.097-.023.072-.022.166-.058.282-.111.23-.106.525-.272.857-.5a10.197 10.197 0 0 0 2.197-2.093C12.9 9.9 14.13 7.056 13.597 3.159a.454.454 0 0 0-.315-.366c-.626-.2-1.682-.526-2.725-.802C9.491 1.71 8.51 1.5 8 1.5c-.51 0-1.49.21-2.557.491zm-.256-.966C6.23.749 7.337.5 8 .5c.662 0 1.77.249 2.813.525a61.09 61.09 0 0 1 2.772.815c.528.168.926.623 1.003 1.184.573 4.197-.756 7.307-2.367 9.365a11.191 11.191 0 0 1-2.418 2.3 6.942 6.942 0 0 1-1.007.586c-.27.124-.558.225-.796.225s-.526-.101-.796-.225a6.908 6.908 0 0 1-1.007-.586 11.192 11.192 0 0 1-2.417-2.3C2.167 10.331.839 7.221 1.412 3.024A1.454 1.454 0 0 1 2.415 1.84a61.11 61.11 0 0 1 2.772-.815z"/>
-  <path fill-rule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
-</svg>
-									    </div><!--//icon-holder-->
-						                
-							        </div><!--//col-->
-							        <div class="col-auto">
-								        <h4 class="app-card-title">Security</h4>
-							        </div><!--//col-->
-						        </div><!--//row-->
-						    </div><!--//app-card-header-->
-						    <div class="app-card-body px-4 w-100">
-							    
-							    <div class="item border-bottom py-3">
-								    <div class="row justify-content-between align-items-center">
-									    <div class="col-auto">
-										    <div class="item-label"><strong>Password</strong></div>
-									        <div class="item-data">••••••••</div>
-									    </div><!--//col-->
-									    <div class="col text-end">
-										    <a class="btn-sm app-btn-secondary" href="#">Change</a>
-									    </div><!--//col-->
-								    </div><!--//row-->
-							    </div><!--//item-->
-							    <div class="item border-bottom py-3">
-								    <div class="row justify-content-between align-items-center">
-									    <div class="col-auto">
-										    <div class="item-label"><strong>Two-Factor Authentication</strong></div>
-									        <div class="item-data">You haven't set up two-factor authentication. </div>
-									    </div><!--//col-->
-									    <div class="col text-end">
-										    <a class="btn-sm app-btn-secondary" href="#">Set up</a>
-									    </div><!--//col-->
-								    </div><!--//row-->
-							    </div><!--//item-->
-						    </div><!--//app-card-body-->
-						    
-						    <div class="app-card-footer p-4 mt-auto">
-							   <a class="btn app-btn-secondary" href="#">Manage Security</a>
-						    </div><!--//app-card-footer-->
-						   
+			        </div><!--//tab-pane-->
+			        
+			        <div class="tab-pane fade" id="orders-pending" role="tabpanel" aria-labelledby="orders-pending-tab">
+					    <div class="app-card app-card-orders-table mb-5">
+						    <div class="app-card-body">
+							    <div class="table-responsive">
+							        <table class="table mb-0 text-left">
+										<thead>
+											<tr>
+												<th class="cell">Order</th>
+												<th class="cell">Product</th>
+												<th class="cell">Customer</th>
+												<th class="cell">Date</th>
+												<th class="cell">Status</th>
+												<th class="cell">Total</th>
+												<th class="cell"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="cell">#15345</td>
+												<td class="cell"><span class="truncate">Consectetur adipiscing elit</span></td>
+												<td class="cell">Dylan Ambrose</td>
+												<td class="cell"><span class="cell-data">16 Oct</span><span class="note">03:16 AM</span></td>
+												<td class="cell"><span class="badge bg-warning">Pending</span></td>
+												<td class="cell">$96.20</td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+											</tr>
+										</tbody>
+									</table>
+						        </div><!--//table-responsive-->
+						    </div><!--//app-card-body-->		
 						</div><!--//app-card-->
-	                </div>
-	                <div class="col-12 col-lg-6">
-		                <div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
-						    <div class="app-card-header p-3 border-bottom-0">
-						        <div class="row align-items-center gx-3">
-							        <div class="col-auto">
-								        <div class="app-icon-holder">
-										    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-credit-card" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/>
-  <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"/>
-</svg>
-									    </div><!--//icon-holder-->
-						                
-							        </div><!--//col-->
-							        <div class="col-auto">
-								        <h4 class="app-card-title">Payment methods</h4>
-							        </div><!--//col-->
-						        </div><!--//row-->
-						    </div><!--//app-card-header-->
-						    <div class="app-card-body px-4 w-100">
-							    
-							    <div class="item border-bottom py-3">
-								    <div class="row justify-content-between align-items-center">
-									    <div class="col-auto">
-										    <div class="item-label"><i class="fab fa-cc-visa me-2"></i><strong>Credit/Debit Card </strong></div>
-									        <div class="item-data">1234*******5678</div>
-									    </div><!--//col-->
-									    <div class="col text-end">
-										    <a class="btn-sm app-btn-secondary" href="#">Edit</a>
-									    </div><!--//col-->
-								    </div><!--//row-->
-							    </div><!--//item-->
-							    <div class="item border-bottom py-3">
-								    <div class="row justify-content-between align-items-center">
-									    <div class="col-auto">
-										    <div class="item-label"><i class="fab fa-paypal me-2"></i><strong>PayPal</strong></div>
-									        <div class="item-data">Not connected</div>
-									    </div><!--//col-->
-									    <div class="col text-end">
-										    <a class="btn-sm app-btn-secondary" href="#">Connect</a>
-									    </div><!--//col-->
-								    </div><!--//row-->
-							    </div><!--//item-->
-						    </div><!--//app-card-body-->
-						    <div class="app-card-footer p-4 mt-auto">
-							   <a class="btn app-btn-secondary" href="#">Manage Payment</a>
-						    </div><!--//app-card-footer-->
-						   
+			        </div><!--//tab-pane-->
+			        <div class="tab-pane fade" id="orders-cancelled" role="tabpanel" aria-labelledby="orders-cancelled-tab">
+					    <div class="app-card app-card-orders-table mb-5">
+						    <div class="app-card-body">
+							    <div class="table-responsive">
+							        <table class="table mb-0 text-left">
+										<thead>
+											<tr>
+												<th class="cell">Order</th>
+												<th class="cell">Product</th>
+												<th class="cell">Customer</th>
+												<th class="cell">Date</th>
+												<th class="cell">Status</th>
+												<th class="cell">Total</th>
+												<th class="cell"></th>
+											</tr>
+										</thead>
+										<tbody>
+											
+											<tr>
+												<td class="cell">#15342</td>
+												<td class="cell"><span class="truncate">Justo feugiat neque</span></td>
+												<td class="cell">Reina Brooks</td>
+												<td class="cell"><span class="cell-data">12 Oct</span><span class="note">04:23 PM</span></td>
+												<td class="cell"><span class="badge bg-danger">Cancelled</span></td>
+												<td class="cell">$59.00</td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="#">View</a></td>
+											</tr>
+											
+										</tbody>
+									</table>
+						        </div><!--//table-responsive-->
+						    </div><!--//app-card-body-->		
 						</div><!--//app-card-->
-	                </div>
-                </div><!--//row-->
+			        </div><!--//tab-pane-->
+				</div><!--//tab-content-->
+				
+				
 			    
 		    </div><!--//container-fluid-->
 	    </div><!--//app-content-->
@@ -632,6 +649,7 @@
     <!-- Javascript -->          
     <script src="{{asset('/')}}admin_panel/assets/plugins/popper.min.js"></script>
     <script src="{{asset('/')}}admin_panel/assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    
     
     <!-- Page Specific JS -->
     <script src="{{asset('/')}}admin_panel/assets/js/app.js"></script> 

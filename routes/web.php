@@ -43,7 +43,13 @@ Route::get('/admin/help', [App\Http\Controllers\Admin\HelpController::class, 'in
 Route::get('/admin/docs', [App\Http\Controllers\Admin\DocsController::class, 'index']) -> name('admin_docs');
 Route::get('/admin/login', [App\Http\Controllers\Admin\LoginController::class, 'index']) -> name('admin_login');
 Route::get('/admin/notifications', [App\Http\Controllers\Admin\NotificationsController::class, 'index']) -> name('admin_notifications');
+Route::get('/admin/order', [App\Http\Controllers\Admin\OrderController::class, 'index']) -> name('admin_order');
 Route::get('/admin/category', [App\Http\Controllers\Admin\CategoryController::class, 'index']) -> name('admin_category');
+Route::get('/admin/category/create', [App\Http\Controllers\Admin\CategoryController::class, 'create']) -> name('admin_category_create');
+Route::post('/admin/category/store', [App\Http\Controllers\Admin\CategoryController::class, 'store']) -> name('admin_category_store');
+Route::get('/admin/category/edit/{id}', [App\Http\Controllers\Admin\CategoryController::class, 'edit']) -> name('admin_category_edit');
+Route::post('/admin/category/update/{id}', [App\Http\Controllers\Admin\CategoryController::class, 'update']) -> name('admin_category_update');
+Route::get('/admin/category/delete/{id}', [App\Http\Controllers\Admin\CategoryController::class, 'destroy']) -> name('admin_category_delete');
 Route::get('/admin/settings', [App\Http\Controllers\Admin\SettingsController::class, 'index']) -> name('admin_settings');
 Route::get('/admin/signup', [App\Http\Controllers\Admin\SignupController::class, 'index']) -> name('admin_signup');
 Route::get('/admin/reset_password', [App\Http\Controllers\Admin\ResetPasswordController::class, 'index']) -> name('admin_reset_password');
