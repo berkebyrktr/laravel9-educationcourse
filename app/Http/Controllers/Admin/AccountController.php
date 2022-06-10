@@ -9,6 +9,6 @@ class AccountController extends Controller
 {
     public function index()
     {
-        return view('Admin.Account.index');
+        return view('admin.Account.index');
     }
 }

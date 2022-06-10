@@ -9,6 +9,6 @@ class HelpController extends Controller
 {
     public function index()
     {
-        return view('Admin.Help.index');
+        return view('admin.Help.index');
     }
 }

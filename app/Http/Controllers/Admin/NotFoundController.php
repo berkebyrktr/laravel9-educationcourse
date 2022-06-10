@@ -9,6 +9,6 @@ class NotFoundController extends Controller
 {
     public function index()
     {
-        return view('Admin.NotFound.index');
+        return view('admin.NotFound.index');
     }
 }

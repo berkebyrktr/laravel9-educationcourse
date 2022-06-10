@@ -9,6 +9,6 @@ class OrderController extends Controller
 {
     public function index()
     {
-        return view('Admin.Order.index');
+        return view('admin.Order.index');
     }
 }

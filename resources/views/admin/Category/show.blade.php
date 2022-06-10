@@ -149,13 +149,13 @@
 								<li><hr class="dropdown-divider"></li>
 								<li><a class="dropdown-item" href="/admin/login">Log Out</a></li>
 							</ul>
-			            </div><!--//app-user-dropdown-->  
+			            </div><!--//app-user-dropdown--> 
 		            </div><!--//app-utilities-->
 		        </div><!--//row-->
 	            </div><!--//app-header-content-->
 	        </div><!--//container-fluid-->
         </div><!--//app-header-inner-->
-        <div id="app-sidepanel" class="app-sidepanel"> 
+        <div id="app-sidepanel" class="app-sidepanel sidepanel-hidden"> 
 	        <div id="sidepanel-drop" class="sidepanel-drop"></div>
 	        <div class="sidepanel-inner d-flex flex-column">
 		        <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
@@ -163,7 +163,6 @@
 		            <a class="app-logo" href="/admin"><img class="logo-icon me-2" src="{{asset('/')}}admin_panel/assets/images/app-logo.svg" alt="logo"><span class="logo-text">PORTAL</span></a>
 	
 		        </div><!--//app-branding-->  
-		        
 			    <nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
 				    <ul class="app-menu list-unstyled accordion" id="menu-accordion">
 					    <li class="nav-item">
@@ -207,7 +206,7 @@
 					    </li><!--//nav-item-->
 						<li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link" href="/admin/category">
+					        <a class="nav-link active" href="/admin/category">
 						        <span class="nav-icon">
 						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
@@ -220,10 +219,11 @@
 		                         <span class="nav-link-text">Categories</span>
 					        </a><!--//nav-link-->
 					    </li><!--//nav-item-->
+
 					    
 					    <li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link active" href="/admin/charts">
+					        <a class="nav-link" href="/admin/charts">
 						        <span class="nav-icon">
 						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bar-chart-line" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 	  <path fill-rule="evenodd" d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z"/>
@@ -265,7 +265,6 @@
 					    </ul><!--//footer-menu-->
 				    </nav>
 			    </div><!--//app-sidepanel-footer-->
-		       
 	        </div><!--//sidepanel-inner-->
 	    </div><!--//app-sidepanel-->
     </header><!--//app-header-->
@@ -275,84 +274,71 @@
 	    <div class="app-content pt-3 p-md-3 p-lg-4">
 		    <div class="container-xl">
 			    
-			    <h1 class="app-page-title">Charts</h1>
-			    <div class="app-card shadow-sm mb-4 border-left-decoration">
-				    <div class="inner">
-					    <div class="app-card-body p-4">
-						    <div class="row gx-5 gy-3">
-						        <div class="col-12 col-lg-9">
-							        
-							        <div>You can use <a href="https://www.chartjs.org/" target="_blank">Chart.js</a> to create charts for your app. To configure the charts on this page you can edit the relevant JavaScript file: <code>{{asset('/')}}admin_panel/assets/js/charts-demo.js</code> </div>
-							    </div><!--//col-->
-							    <div class="col-12 col-lg-3">
-								    <a class="btn app-btn-primary" href="https://www.chartjs.org/docs/latest/" target="_blank"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-up-right-square me-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-  <path fill-rule="evenodd" d="M5.172 10.828a.5.5 0 0 0 .707 0l4.096-4.096V9.5a.5.5 0 1 0 1 0V5.525a.5.5 0 0 0-.5-.5H6.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707z"/>
-</svg>Learn More</a>
-							    </div><!--//col-->
-						    </div><!--//row-->
-	
-					    </div><!--//app-card-body-->
-					    
-				    </div><!--//inner-->
-			    </div><!--//app-card-->
-			    <div class="row g-4 mb-4">
-			        <div class="col-12 col-lg-6">
-					    <div class="app-card app-card-chart h-100 shadow-sm">
-					        <div class="app-card-header p-3 border-0">
-						        <h4 class="app-card-title">Area Line Chart Demo</h4>
-					        </div><!--//app-card-header-->
-					        <div class="app-card-body p-4">					   
-						        <div class="chart-container">
-				                    <canvas id="chart-line" ></canvas>
-						        </div>
-					        </div><!--//app-card-body-->
-				        </div><!--//app-card-->
-			        </div><!--//col-->
-		            <div class="col-12 col-lg-6">		        
-				        <div class="app-card app-card-chart h-100 shadow-sm">
-					        <div class="app-card-header p-3 border-0">
-						        <h4 class="app-card-title">Bar Chart Demo</h4>
-					        </div><!--//app-card-header-->
-					        <div class="app-card-body p-4">					   
-						        <div class="chart-container">
-				                    <canvas id="chart-bar" ></canvas>
-						        </div>
-					        </div><!--//app-card-body-->
-				        </div><!--//app-card-->
-		            </div><!--//col-->
-		            <div class="col-12 col-lg-6">		        
-				        <div class="app-card app-card-chart h-100 shadow-sm">
-					        <div class="app-card-header p-3 border-0">
-						        <h4 class="app-card-title">Pie Chart Demo</h4>
-					        </div><!--//app-card-header-->
-					        <div class="app-card-body p-4">					   
-						        <div class="chart-container">
-				                    <canvas id="chart-pie" ></canvas>
-						        </div>
-					        </div><!--//app-card-body-->
-				        </div><!--//app-card-->
-		            </div><!--//col-->
-		            <div class="col-12 col-lg-6">		        
-				        <div class="app-card app-card-chart h-100 shadow-sm">
-					        <div class="app-card-header p-3 border-0">
-						        <h4 class="app-card-title">Doughnut Chart Demo</h4>
-					        </div><!--//app-card-header-->
-					        <div class="app-card-body p-4">					   
-						        <div class="chart-container">
-				                    <canvas id="chart-doughnut" ></canvas>
-						        </div>
-					        </div><!--//app-card-body-->
-				        </div><!--//app-card-->
-		            </div><!--//col-->
+			    <div class="row g-3 mb-4 align-items-center justify-content-between">
+				    <div class="col-auto">
+			            <h1 class="app-page-title mb-0">{{$data->title}}</h1>
+				    </div>
+				    <div class="col-auto">
+
+				    </div><!--//col-auto-->
 			    </div><!--//row-->
+			
+				
+				
+				<div class="tab-content" id="orders-table-tab-content">
+			        <div class="tab-pane fade show active" id="orders-all" role="tabpanel" aria-labelledby="orders-all-tab">
+					    <div class="app-card app-card-orders-table shadow-sm mb-5">
+						    <div class="app-card-body">
+							    <div class="table-responsive">
+							        <table class="table app-table-hover mb-0 text-left">
+
+										<tbody>
+
+	
+												<tr>
+													<td>Id:</td>
+													<td class="cell">{{$data->id}}</td>
+												</tr>
+												<tr>
+													<td>Title:</td>
+													<td class="cell"><span class="truncate">{{$data->title}}</span></td>
+												</tr>
+												<tr>
+													<td>Description:</td>
+													<td class="cell">{{$data->description}}</td>
+												</tr>  
+												<tr>
+													<td>Keywords:</td>
+													<td class="cell">{{$data->keywords}}</td>
+												</tr>
+												<tr>
+													<td >Status:</td>
+												<?php if ($data->status) { ?>
+													<td class="cell"><span class="badge bg-success">Active</span></td>
+												<?php } else { ?>
+													<td class="cell"><span class="badge bg-danger">Passive</span></td>
+												<?php } ?>
+												</tr>
+
+
+										</tbody>
+									</table>
+						        </div><!--//table-responsive-->
+						       
+						    </div><!--//app-card-body-->		
+						</div><!--//app-card-->
+						
+			        </div><!--//tab-pane-->
+				</div><!--//tab-content-->
+				
+				
+			    
 		    </div><!--//container-fluid-->
 	    </div><!--//app-content-->
 	    
 	    <footer class="app-footer">
 		    <div class="container text-center py-3">
 		         <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-            <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="app-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
 		       
 		    </div>
 	    </footer><!--//app-footer-->
@@ -364,11 +350,6 @@
     <script src="{{asset('/')}}admin_panel/assets/plugins/popper.min.js"></script>
     <script src="{{asset('/')}}admin_panel/assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
     
-
-    
-    <!-- Charts JS -->
-    <script src="{{asset('/')}}admin_panel/assets/plugins/chart.js/chart.min.js"></script> 
-    <script src="{{asset('/')}}admin_panel/assets/js/charts-demo.js"></script> 
     
     <!-- Page Specific JS -->
     <script src="{{asset('/')}}admin_panel/assets/js/app.js"></script> 

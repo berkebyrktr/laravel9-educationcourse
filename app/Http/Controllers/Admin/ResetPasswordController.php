@@ -9,6 +9,6 @@ class ResetPasswordController extends Controller
 {
     public function index()
     {
-        return view('Admin.ResetPassword.index');
+        return view('admin.ResetPassword.index');
     }
 }

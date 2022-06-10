@@ -9,6 +9,6 @@ class LoginController extends Controller
 {
     public function index()
     {
-        return view('Admin.Login.index');
+        return view('admin.Login.index');
     }
 }

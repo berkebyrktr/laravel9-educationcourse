@@ -11,18 +11,18 @@ class CategoryController extends Controller
     public function index()
     {
         $data = Category::all();
-        return view('Admin.Category.index', ['data' => $data]);
+        return view('admin.Category.index', ['data' => $data]);
     }
 
     public function create()
     {
-        return view('Admin.Category.create');
+        return view('admin.Category.create');
     }
 
     public function edit($id)
     {
         $data = Category::find($id);
-        return view('Admin.Category.edit', ['data' => $data]);
+        return view('admin.Category.edit', ['data' => $data]);
     }
 
     public function store(Request $request)
@@ -51,6 +51,12 @@ class CategoryController extends Controller
 
         $data->save();
         return redirect('admin/category');
+    }
+
+    public function show(Category $category, $id)
+    {
+        $data = Category::find($id);
+        return view('admin/category/show', ['data' => $data]);
     }
 
     public function destroy($id)

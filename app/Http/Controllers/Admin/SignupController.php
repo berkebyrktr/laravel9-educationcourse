@@ -9,6 +9,6 @@ class SignupController extends Controller
 {
     public function index()
     {
-        return view('Admin.Signup.index');
+        return view('admin.Signup.index');
     }
 }

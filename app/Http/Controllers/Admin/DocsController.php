@@ -9,6 +9,6 @@ class DocsController extends Controller
 {
     public function index()
     {
-        return view('Admin.Docs.index');
+        return view('admin.Docs.index');
     }
 }

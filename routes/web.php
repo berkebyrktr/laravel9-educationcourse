@@ -13,13 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('elearning.index');
-});
-
-
-Route::get('/', [\App\Http\Controllers\HomeController::class, 'index']) -> name('home');
-
 
 Route::middleware([
     'auth:sanctum',
@@ -31,11 +24,19 @@ Route::middleware([
     })->name('dashboard');
 });
 
-//**********************ADMIN PANEL ROUTES***********************    */
+//**********************ELEARNING ROUTES***********************    */
+
+Route::get('/', [\App\Http\Controllers\Elearning\HomeController::class, 'index']) -> name('home');
+Route::get('/about', [\App\Http\Controllers\Elearning\AboutController::class, 'index']) -> name('about');
+Route::get('/contact', [\App\Http\Controllers\Elearning\ContactController::class, 'index']) -> name('contact');
+Route::get('/categories', [\App\Http\Controllers\Elearning\CategoryController::class, 'index']) -> name('categories');
+Route::get('/courses/{id}', [\App\Http\Controllers\Elearning\CoursesController::class, 'index']) -> name('courses');
+Route::get('/not_found', [\App\Http\Controllers\Elearning\NotFoundController::class, 'index']) -> name('not_found');
+Route::get('/team', [\App\Http\Controllers\Elearning\TeamController::class, 'index']) -> name('team');
+Route::get('/testimonial', [\App\Http\Controllers\Elearning\TestimonialController::class, 'index']) -> name('testimonial');
+
+//**********************ADMIN ROUTES***********************    */
 Route::get('/admin', [App\Http\Controllers\Admin\HomeController::class, 'index']) -> name('admin');
-
-//**********************ADMIN CATEGORY ROUTES***********************    */
-
 Route::get('/admin/charts', [App\Http\Controllers\Admin\ChartController::class, 'index']) -> name('admin_chart');
 Route::get('/admin/not_found', [App\Http\Controllers\Admin\NotFoundController::class, 'index']) -> name('admin_not_found');
 Route::get('/admin/account', [App\Http\Controllers\Admin\AccountController::class, 'index']) -> name('admin_account');
@@ -49,7 +50,9 @@ Route::get('/admin/category/create', [App\Http\Controllers\Admin\CategoryControl
 Route::post('/admin/category/store', [App\Http\Controllers\Admin\CategoryController::class, 'store']) -> name('admin_category_store');
 Route::get('/admin/category/edit/{id}', [App\Http\Controllers\Admin\CategoryController::class, 'edit']) -> name('admin_category_edit');
 Route::post('/admin/category/update/{id}', [App\Http\Controllers\Admin\CategoryController::class, 'update']) -> name('admin_category_update');
+Route::get('/admin/category/show/{id}', [App\Http\Controllers\Admin\CategoryController::class, 'show']) -> name('admin_category_show');
 Route::get('/admin/category/delete/{id}', [App\Http\Controllers\Admin\CategoryController::class, 'destroy']) -> name('admin_category_delete');
 Route::get('/admin/settings', [App\Http\Controllers\Admin\SettingsController::class, 'index']) -> name('admin_settings');
 Route::get('/admin/signup', [App\Http\Controllers\Admin\SignupController::class, 'index']) -> name('admin_signup');
 Route::get('/admin/reset_password', [App\Http\Controllers\Admin\ResetPasswordController::class, 'index']) -> name('admin_reset_password');
+Route::get('/admin/category/show{id}', [App\Http\Controllers\Admin\ResetPasswordController::class, 'show']) -> name('admin_category_show');
