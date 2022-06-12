@@ -60,3 +60,14 @@ Route::get('/admin/settings', [App\Http\Controllers\Admin\SettingsController::cl
 Route::get('/admin/signup', [App\Http\Controllers\Admin\SignupController::class, 'index']) -> name('admin_signup');
 Route::get('/admin/reset_password', [App\Http\Controllers\Admin\ResetPasswordController::class, 'index']) -> name('admin_reset_password');
 Route::get('/admin/category/show{id}', [App\Http\Controllers\Admin\ResetPasswordController::class, 'show']) -> name('admin_category_show');
+
+
+//**********************ADMIN PRODUCT ROTES********************** */
+Route::get('/admin/course', [App\Http\Controllers\Admin\CourseController::class, 'index']) -> name('admin_course');
+Route::get('/admin/course/create', [App\Http\Controllers\Admin\CourseController::class, 'create']) -> name('admin_course_create');
+Route::post('/admin/course/store', [App\Http\Controllers\Admin\CourseController::class, 'store']) -> name('admin_course_store');
+Route::get('/admin/course/edit/{id}', [App\Http\Controllers\Admin\CourseController::class, 'edit']) -> name('admin_course_edit');
+Route::post('/admin/course/update/{id}', [App\Http\Controllers\Admin\CourseController::class, 'update']) -> name('admin_course_update');
+Route::get('/admin/course/show/{id}', [App\Http\Controllers\Admin\CourseController::class, 'show']) -> name('admin_course_show');
+Route::get('/admin/course/delete/{id}', [App\Http\Controllers\Admin\CourseController::class, 'destroy']) -> name('admin_course_delete');
+Route::get('/admin/course/show{id}', [App\Http\Controllers\Admin\CourseController::class, 'show']) -> name('admin_course_show');
