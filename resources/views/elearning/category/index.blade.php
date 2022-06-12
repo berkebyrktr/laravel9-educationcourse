@@ -53,6 +53,7 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="/" class="nav-item nav-link">Home</a>
                 <a href="/about" class="nav-item nav-link">About</a>
+                <a href="/faq" class="nav-item nav-link">F.A.Q.</a>
                 <div class="nav-item dropdown">
                     <a href="/categories" class="nav-link dropdown-toggle active">Courses</a>
                     <div class="dropdown-menu fade-down m-0">
@@ -64,6 +65,9 @@
                     </div>
                 </div>
                 <a href="/contact" class="nav-item nav-link">Contact</a>
+                @auth
+                    <a href="/cart" class="nav-item nav-link">My Cart</a>
+                @endauth
             </div>
             @auth
                 <div class="app-utility-item app-user-dropdown dropdown">
@@ -80,7 +84,8 @@
             @endauth
 
             @guest
-                <a href="/loginuser" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+                <a href="/registeruser" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Register<i class="fa fa-arrow-right ms-3"></i></a>
+                <a href="/loginuser" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Login<i class="fa fa-arrow-right ms-3"></i></a>
             @endguest
         </div>
     </nav>

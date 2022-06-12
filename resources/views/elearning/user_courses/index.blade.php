@@ -53,6 +53,7 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="/" class="nav-item nav-link">Home</a>
                 <a href="/about" class="nav-item nav-link">About</a>
+                <a href="/faq" class="nav-item nav-link">F.A.Q.</a>
                 <div class="nav-item dropdown">
                     <a href="/categories" class="nav-link dropdown-toggle active">Courses</a>
                     <div class="dropdown-menu fade-down m-0">
@@ -62,6 +63,9 @@
                     </div>
                 </div>
                 <a href="/contact" class="nav-item nav-link">Contact</a>
+                @auth
+                    <a href="/cart" class="nav-item nav-link">My Cart</a>
+                @endauth
             </div>
             
             @auth
@@ -79,7 +83,8 @@
             @endauth
 
             @guest
-                <a href="/loginuser" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+                <a href="/registeruser" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Register<i class="fa fa-arrow-right ms-3"></i></a>
+                <a href="/loginuser" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Login<i class="fa fa-arrow-right ms-3"></i></a>
             @endguest
         </div>
     </nav>
@@ -121,7 +126,9 @@
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid" src="{{asset('/')}}elearning/img/course-1.jpg" alt="">
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Read More</a>
+                            <a href="/user_courses/show/{{$item->id}}" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Details</a>
+                            <a href="/user_courses/edit/{{$item->id}}" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 0 0 0 0;">Edit</a>    
+                            <a href="/user_courses/delete/{{$item->id}}" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Delete</a>
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
@@ -129,7 +136,14 @@
                             <h5 class="mb-4">{{$item->title}}</h5>
                         </div>
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>{{$item->category}}</small>
+                            <?php if ($item->status) { ?>
+                                <small class="flex-fill text-center border-end py-2">Active</small>
+
+                            <?php } else { ?>
+                                <small class="flex-fill text-center border-end py-2">Passive</small>
+
+                            <?php } ?>
                             <small class="flex-fill text-center py-2"><i class="fa fa-clock text-primary me-2"></i>{{$item->time}} Hours</small>
                         </div>
                     </div>

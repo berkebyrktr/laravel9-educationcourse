@@ -53,6 +53,7 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="/" class="nav-item nav-link">Home</a>
                 <a href="/about" class="nav-item nav-link">About</a>
+                <a href="/faq" class="nav-item nav-link">F.A.Q.</a>
                 <div class="nav-item dropdown">
                 <a href="/categories" class="nav-link dropdown-toggle">Courses</a>
                     <div class="dropdown-menu fade-down m-0">
@@ -62,6 +63,9 @@
                     </div>
                 </div>
                 <a href="/contact" class="nav-item nav-link active">Contact</a>
+                @auth
+                    <a href="/cart" class="nav-item nav-link">My Cart</a>
+                @endauth
             </div>
             
             @auth
@@ -79,7 +83,8 @@
             @endauth
 
             @guest
-                <a href="/loginuser" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+                <a href="/registeruser" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Register<i class="fa fa-arrow-right ms-3"></i></a>
+                <a href="/loginuser" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Login<i class="fa fa-arrow-right ms-3"></i></a>
             @endguest
         </div>
     </nav>
@@ -121,7 +126,7 @@
                         </div>
                         <div class="ms-3">
                             <h5 class="text-primary">Office</h5>
-                            <p class="mb-0">100.yıl mahallesi Karabük</p>
+                            <p class="mb-0">{{$info->address}}</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-3">
@@ -130,7 +135,7 @@
                         </div>
                         <div class="ms-3">
                             <h5 class="text-primary">Mobile</h5>
-                            <p class="mb-0">0551 980 96 49</p>
+                            <p class="mb-0">{{$info->phone}}</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center">
@@ -139,7 +144,7 @@
                         </div>
                         <div class="ms-3">
                             <h5 class="text-primary">Email</h5>
-                            <p class="mb-0">1910205084@ogrenci.karabuk.edu.tr</p>
+                            <p class="mb-0">{{$info->email}}</p>
                         </div>
                     </div>
                 </div>

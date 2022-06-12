@@ -206,7 +206,7 @@
 					    </li><!--//nav-item-->
 						<li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link active" href="/admin/category">
+					        <a class="nav-link" href="/admin/category">
 						        <span class="nav-icon">
 						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
@@ -220,6 +220,21 @@
 					        </a><!--//nav-link-->
 					    </li><!--//nav-item-->
 
+						<li class="nav-item">
+					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
+					        <a class="nav-link active" href="/admin/course">
+						        <span class="nav-icon">
+						        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-card-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+								<path fill-rule="evenodd" d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5z"/>
+								<circle cx="3.5" cy="5.5" r=".5"/>
+								<circle cx="3.5" cy="8" r=".5"/>
+								<circle cx="3.5" cy="10.5" r=".5"/>
+								</svg>
+						         </span>
+		                         <span class="nav-link-text">Courses</span>
+					        </a><!--//nav-link-->
+					    </li><!--//nav-item-->
 					    
 					    <li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
@@ -276,7 +291,7 @@
 			    
 			    <div class="row g-3 mb-4 align-items-center justify-content-between">
 				    <div class="col-auto">
-			            <h1 class="app-page-title mb-0">Categories</h1>
+			            <h1 class="app-page-title mb-0">Courses</h1>
 				    </div>
 				    <div class="col-auto">
 					     <div class="page-utilities">
@@ -284,7 +299,7 @@
 
 							    
 							    <div class="col-auto">						    
-								    <a class="btn app-btn-secondary" href="/admin/category/create">
+								    <a class="btn app-btn-secondary" href="/admin/course/create">
 									    Create New
 									</a>
 							    </div>
@@ -303,10 +318,10 @@
 							        <table class="table app-table-hover mb-0 text-left">
 										<thead>
 											<tr>
-												<th class="cell">CategoryId</th>
+												<th class="cell">CourseId</th>
 												<th class="cell">Title</th>
 												<th class="cell">Description</th>
-												<th class="cell">Keywords</th>
+												<th class="cell">Price</th>
 												<th class="cell">Status</th>
 												<th class="cell"></th>
 											</tr>
@@ -317,7 +332,7 @@
 												<td class="cell">{{$item->id}}</td>
 												<td class="cell"><span class="truncate">{{$item->title}}</span></td>
 												<td class="cell">{{$item->description}}</td>  
-												<td class="cell">{{$item->keywords}}</td>
+												<td class="cell">{{$item->price}}₺</td>
 												
 												<?php if ($item->status) { ?>
 													<td class="cell"><span class="badge bg-success">Active</span></td>
@@ -325,9 +340,9 @@
 													<td class="cell"><span class="badge bg-danger">Passive</span></td>
 												<?php } ?>
 												
-												<td class="cell"><a class="btn-sm app-btn-secondary" href="/admin/category/show/{{$item->id}}">View</a></td>
-												<td class="cell"><a class="btn-sm app-btn-secondary" href="/admin/category/edit/{{$item->id}}">Edit</a></td>
-												<td class="cell"><a class="btn-sm app-btn-secondary" href="/admin/category/delete/{{$item->id}}">Delete</a></td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="/admin/course/show/{{$item->id}}">View</a></td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="/admin/course/edit/{{$item->id}}">Edit</a></td>
+												<td class="cell"><a class="btn-sm app-btn-secondary" href="/admin/course/delete/{{$item->id}}">Delete</a></td>
 											</tr>
 											@endforeach
 										</tbody>

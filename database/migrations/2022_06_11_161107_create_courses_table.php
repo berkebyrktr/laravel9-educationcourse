@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('courses', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->id();
             $table->foreignId('user_id')->index();  
             $table->foreignId('category_id')->index();         
             $table->string('video');
@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('description', 255);
             $table->string('time');
             $table->integer('price')->index();
-            $table->string('status',6)->default('False');
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }

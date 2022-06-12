@@ -6,45 +6,43 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Course;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class CourseController extends Controller
 {
     public function index()
     {
         $data = Course::all();
-        return view('admin.category.index', ['data' => $data]);
+        return view('admin.course.index', ['data' => $data]);
     }
 
     public function create()
     {
         $data=Category::all();
-
-        return view('admin.course.create',[
-        'data' =>$data]);
+        return view('admin.course.create', ['data' =>$data]);
 
     }
 
     public function edit(Course $course,$id)
     {
         $data = Course::find($id);
-        $datalist=Category::all();
-        return view('admin.course.edit', ['data' => $data ,'datalist'=> $datalist]);
+        $categories=Category::all();
+        return view('admin.course.edit', ['data' => $data ,'categories'=> $categories]);
        
     }
 
     public function store(Request $request)
     {
-        $data = new Category();
+        $userId = Auth::user()->id;
+        $data = new Course();
         $data->title = $request->title;
-        $data->category_id =$request->category_id;
-        $data->user_id =0; //$request->category_id;
-        $data->keywords = $request->keywords;
+        $data->category_id = $request->category;
+        $data->user_id = $userId;
         $data->description = $request->description;
         $data->video = $request->video;
         $data->time = $request->time;
         $data->price = $request->price;
-        $data->status = $request->status;
-        $data->image = "";
         $data->status = $request->status;
       
 
@@ -56,16 +54,14 @@ class CourseController extends Controller
     public function update(Request $request, Course $course, $id)
     {
         $data = Course::find($id);
+
         $data->title = $request->title;
-        $data->category_id =$request->category_id;
-        $data->user_id =0; //$request->category_id;
-        $data->keywords = $request->keywords;
+        $data->category_id = $request->category;
         $data->description = $request->description;
         $data->video = $request->video;
         $data->time = $request->time;
         $data->price = $request->price;
         $data->status = $request->status;
-        $data->image = "";
 
         $data->save();
         return redirect('admin/course');
@@ -73,7 +69,7 @@ class CourseController extends Controller
      
     }
 
-    public function show(Course $Category, $id)
+    public function show(Course $Course, $id)
     {
         $data = Course::find($id);
         return view('admin/course/show', ['data' => $data]);
