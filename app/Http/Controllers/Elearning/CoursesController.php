@@ -21,6 +21,15 @@ class CoursesController extends Controller
         return view('elearning.courses.index', ['id'=> $id, 'data' => $data, 'courses' => $courses]);
     }
 
+    public function search(Request $request){
+        $data = Category::all();
+        $courses = Course::where('title', $request->search)->where('status', 1)->get();
+        foreach($courses as $course){
+            $course->owner = (User::find($course->user_id)->name);
+        }
+        return view('elearning.courses.search', ['data' => $data, 'courses' => $courses, 'query' => $request->search]);
+    }
+
     public function user_courses(){
         $userId = Auth::user()->id;
         $data = Category::all();

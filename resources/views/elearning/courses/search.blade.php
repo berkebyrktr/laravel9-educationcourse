@@ -65,13 +65,13 @@
                     <a href="/categories" class="nav-link dropdown-toggle active">Courses</a>
                     <div class="dropdown-menu fade-down m-0">
                         @foreach($data as $item)
-                            <a href="/courses/{{$item->id}}" class="dropdown-item" style="text-transform:uppercase;"><b>{{$item->title}}</b></a>
+                        <a href="/courses/{{$item->id}}" class="dropdown-item" style="text-transform:uppercase;"><b>{{$item->title}}</b></a>
                         @endforeach
                     </div>
                 </div>
                 <a href="/contact" class="nav-item nav-link">Contact</a>
                 @auth
-                    <a href="/cart" class="nav-item nav-link active">My Cart</a>
+                    <a href="/cart" class="nav-item nav-link">My Cart</a>
                 @endauth
             </div>
             
@@ -103,12 +103,13 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                        <h1 class="display-3 text-white animated slideInDown">My Cart</h1>
+                        <h1 class="display-3 text-white animated slideInDown">Search Key: {{$query}}</h1>
                     
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="/">Home</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">My Cart</li>
+                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="#">Courses</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Search Key: {{$query}}</li>
                         </ol>
                     </nav>
                 </div>
@@ -120,36 +121,37 @@
 
     <!-- Courses Start -->
     <div class="container-xxl py-5">
-        
         <div class="container">
-            
+
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
+                <h1 class="mb-5">Courses</h1>
+            </div>
             <div class="row g-4 justify-content-center">
-            @foreach($purchases as $item)
+            @foreach($courses as $item)
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="course-item bg-light">
                         <div class="position-relative overflow-hidden">
                             <img class="img-fluid" src="{{asset('/')}}elearning/img/course-1.jpg" alt="">
                             <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                            <a href="/cart/delete/{{$item->id}}" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 30px 30px 30px 30px;">Delete</a>
+                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
+                                <a href="/cart/store/{{$item->id}}" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Add To Cart</a>
                             </div>
                         </div>
                         <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">{{$item->course->price}}₺</h3>
-                            <h5 class="mb-4">{{$item->course->title}}</h5>
+                            <h3 class="mb-0">{{$item->price}}₺</h3>
+                            <h5 class="mb-4">{{$item->title}}</h5>
                         </div>
                         <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>{{$item->course->category}}</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-clock text-primary me-2"></i>{{$item->course->time}} Hours</small>
+                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>{{$item->owner}}</small>
+                            <small class="flex-fill text-center py-2"><i class="fa fa-clock text-primary me-2"></i>{{$item->time}} Hours</small>
                         </div>
                     </div>
                 </div>
             @endforeach
-            <a class="btn app-btn-secondary border" href="/cart/complete">
-									    Complete
-		</a>
+
             </div>
         </div>
-
     </div>
     <!-- Courses End -->
         
@@ -198,13 +200,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
+                
                 </div>
             </div>
         </div>
@@ -212,24 +208,8 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
-                        Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+           
     <!-- Footer End -->
 
 

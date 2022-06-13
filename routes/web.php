@@ -35,6 +35,7 @@ Route::view('/registeruser', 'auth.register') -> name('registeruser');
 Route::get('/logout', [\App\Http\Controllers\Elearning\AuthController::class, 'logout']) -> name('logout');
 Route::get('/categories', [\App\Http\Controllers\Elearning\CategoryController::class, 'index']) -> name('categories');
 Route::get('/courses/{id}', [\App\Http\Controllers\Elearning\CoursesController::class, 'index']) -> name('courses');
+Route::post('/courses/search', [\App\Http\Controllers\Elearning\CoursesController::class, 'search']) -> name('courses_search');
 Route::get('/cart', [\App\Http\Controllers\Elearning\CartController::class, 'index']) -> name('cart');
 Route::get('/cart/complete', [\App\Http\Controllers\Elearning\CartController::class, 'complete']) -> name('cart_complete');
 Route::get('/cart/store/{id}', [\App\Http\Controllers\Elearning\CartController::class, 'store']) -> name('cart_store');
